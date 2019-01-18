@@ -89,6 +89,7 @@ public class OISpawner : MonoBehaviour
 		Debug.Log("Spawned from " + _myPath);
 
 		_mySon = GameObject.Instantiate(Resources.Load(_myPath) as GameObject);
+		_mySon.transform.SetParent(this.transform,false);
 	}
 
 	public void DespawnOI()
