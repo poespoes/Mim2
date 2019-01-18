@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 	public Transform groundPoint;
 
 	
-	
 	// Use this for initialization
 	void Start ()
 	{

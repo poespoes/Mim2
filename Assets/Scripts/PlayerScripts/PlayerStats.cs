@@ -9,6 +9,9 @@ public class PlayerStats : MonoBehaviour
 	public Animator playerAnim;
 
 	public int fear;
+	public static bool mimLit;
+	
+	
 
 	// Use this for initialization
 	void Start ()
