@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -10,10 +11,19 @@ public class PlayerStats : MonoBehaviour
 
 	public int fear;
 	public static bool mimLit;
-	
-	
+	public static Transform playerTransform;
+	public static GameObject player;
+	public static bool isInteractive;
 
+
+	private void Awake()
+	{
+		isInteractive = true;
+		playerTransform = this.transform;
+		player = this.transform.gameObject;
+	}
 	// Use this for initialization
+	
 	void Start ()
 	{
 		playerAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
@@ -24,6 +34,7 @@ public class PlayerStats : MonoBehaviour
 		
 		FearChange();
 		IncreaseFear();
+		playerTransform = this.transform;
 	}
 
 
@@ -59,5 +70,29 @@ public class PlayerStats : MonoBehaviour
 		{
 			fear++;
 		}
+	}
+
+	public void Die()
+	{
+		PlayerStats.isInteractive = false;
+		
+		Component[] sprites;
+
+		sprites = player.GetComponentsInChildren<SpriteRenderer>();
+
+		foreach (SpriteRenderer renderer in sprites)
+		{
+			renderer.enabled = false;
+		}
+
+		
+		
+		Invoke("RestartScene",2);
+		
+	}
+
+	public void RestartScene()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }

@@ -44,7 +44,12 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate()
 	{	
 		grounded = Physics2D.OverlapCircle(groundPoint.transform.position,groundRadius,groundDetectionLayer);
-		Move();
+		
+		if (PlayerStats.isInteractive==true)
+		{
+			Move();
+		}
+		
 		Jump();
 		
 		
