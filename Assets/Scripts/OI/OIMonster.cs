@@ -41,6 +41,8 @@ public class OIMonster : MonoBehaviour
 			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
 			float step = speed * Time.deltaTime;
 			transform.position = Vector2.MoveTowards(transform.position, PlayerStats.playerTransform.position, step);
+			speed += Time.deltaTime;
+
 
 
 		}
@@ -62,5 +64,6 @@ public class OIMonster : MonoBehaviour
 	void DisappearToggle()
 	{
 		this.GetComponentInChildren<SpriteRenderer>().enabled = !PlayerStats.mimLit;
+		this.GetComponent<Collider2D>().enabled = !PlayerStats.mimLit;
 	}
 }

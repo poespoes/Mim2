@@ -90,6 +90,7 @@ public class OISpawner : MonoBehaviour
 
 		_mySon = GameObject.Instantiate(Resources.Load(_myPath) as GameObject);
 		_mySon.transform.SetParent(this.transform,false);
+		
 	}
 
 	public void DespawnOI()
