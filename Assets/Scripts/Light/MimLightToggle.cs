@@ -15,15 +15,19 @@ public class MimLightToggle : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButton("Fire1"))
+		if (PlayerStats.isInteractive == true)
 		{
-			MimLightOn();
+
+
+			if (Input.GetButton("Fire1"))
+			{
+				MimLightOn();
+			}
+			else
+			{
+				MimLightOff();
+			}
 		}
-		else
-		{
-			MimLightOff();
-		}
-		
 	}
 
 

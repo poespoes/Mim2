@@ -24,6 +24,7 @@ public class VineChase : MonoBehaviour
 
 	void Chase()
 	{
+		currentDistance = Vector2.Distance(PlayerStats.playerTransform.position, this.transform.position);
 		if (PlayerStats.mimLit == true)
 		{
 			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
