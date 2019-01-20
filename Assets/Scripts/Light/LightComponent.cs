@@ -17,6 +17,12 @@ public class LightComponent : MonoBehaviour {
 
 	public void LightToggleSprite()
 	{
-		this.GetComponent<SpriteRenderer>().enabled = PlayerStats.mimLit;
+		//this.GetComponent<SpriteRenderer>().enabled = PlayerStats.mimLit;
+
+		SpriteRenderer[] _spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
+		foreach (SpriteRenderer _sprite in _spriteRenderer )
+		{
+			_sprite.enabled = PlayerStats.mimLit;
+		}
 	}
 }
