@@ -16,6 +16,8 @@ public class OISpawner : MonoBehaviour
 	public Transform playerTransform;
 	public GameObject _mySon;
 
+	public bool canSpawnOI;
+
 	public enum TypeOfOI
 	{
 		Bottle,
@@ -63,7 +65,8 @@ public class OISpawner : MonoBehaviour
 			}
 			else
 			{
-				SpawnOI();
+				//SpawnOI();
+				canSpawnOI = true;
 				timer = 0;
 			}
 		}
@@ -83,14 +86,17 @@ public class OISpawner : MonoBehaviour
 
 	void SpawnOI()
 	{
-		
-		string _myPath = "Prefabs/OI/" + _typeOfOI.ToString();
-		
-		Debug.Log("Spawned from " + _myPath);
+		if (canSpawnOI == true && _mySon == null)
+		{
 
-		_mySon = GameObject.Instantiate(Resources.Load(_myPath) as GameObject);
-		_mySon.transform.SetParent(this.transform,false);
-		
+			string _myPath = "Prefabs/OI/" + _typeOfOI.ToString();
+
+			Debug.Log("Spawned from " + _myPath);
+
+			_mySon = GameObject.Instantiate(Resources.Load(_myPath) as GameObject);
+			_mySon.transform.SetParent(this.transform, false);
+		}
+
 	}
 
 	public void DespawnOI()
