@@ -7,6 +7,7 @@ public class VineChase : MonoBehaviour
 	public float currentDistance;
 	public float maxDistance;
 	public float speed;
+	public bool isTriggered;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,7 @@ public class VineChase : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (currentDistance < maxDistance)
+		if (isTriggered==true)
 		{
 			Chase();
 		}
