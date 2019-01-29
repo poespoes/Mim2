@@ -56,7 +56,7 @@ public class OIMonster : MonoBehaviour
 		
 	}
 
-	void Die()
+	public void Die()
 	{
 		Destroy(this.gameObject);
 	}
