@@ -66,6 +66,7 @@ public class OISpawner : MonoBehaviour
 			else
 			{
 				//SpawnOI();
+				this.GetComponent<Animator>().SetBool("isSpawning",true);
 				canSpawnOI = true;
 				timer = 0;
 			}
