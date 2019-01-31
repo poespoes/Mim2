@@ -62,6 +62,7 @@ public class OISpawner : MonoBehaviour
 			if (timer > 0)
 			{
 				timer -= Time.deltaTime;
+				
 			}
 			else
 			{
@@ -73,9 +74,12 @@ public class OISpawner : MonoBehaviour
 		}
 		else
 		{
+			this.GetComponent<Animator>().SetBool("isSpawning",false);
+			
 			if (timer < spawnTime)
 			{
 				timer += Time.deltaTime;
+				
 			}
 			else
 			{
@@ -87,7 +91,7 @@ public class OISpawner : MonoBehaviour
 
 	void SpawnOI()
 	{
-		if (canSpawnOI == true && _mySon == null)
+		if (canSpawnOI == true && _mySon == null && PlayerStats.mimLit == false) 
 		{
 
 			string _myPath = "Prefabs/OI/" + _typeOfOI.ToString();
