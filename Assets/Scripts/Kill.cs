@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Kill : MonoBehaviour {
+public class Kill : MonoBehaviour
+{
+
+	public bool lightDeath;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +22,7 @@ public class Kill : MonoBehaviour {
 	{
 		if (other.CompareTag("Player"))
 		{
-			if (other.GetComponent<PlayerStats>() != null)
+			if (other.GetComponent<PlayerStats>() != null && PlayerStats.mimLit==true)
 			{
 				other.GetComponent<PlayerStats>().Die();
 				
