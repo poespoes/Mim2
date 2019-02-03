@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public Animator anim;
 
-	public SpriteRenderer[] spritesToFlip;
+	public SpriteRenderer[] spritesToFlip; //array of all the sprites that need to be flipped
 
 
 	

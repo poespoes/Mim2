@@ -10,7 +10,8 @@ public class PlayerStats : MonoBehaviour
 	public Animator playerAnim;
 
 	public int fear;
-	public static bool mimLit;
+	public static bool mimLit; //if mim is lit or not
+	public static bool canDie; //if can die is true and the light is activated, the vine kills Mim
 	public static Transform playerTransform;
 	public static GameObject player;
 	public static bool isInteractive;
@@ -35,6 +36,11 @@ public class PlayerStats : MonoBehaviour
 		FearChange();
 		IncreaseFear();
 		playerTransform = this.transform;
+
+		if (canDie == true && mimLit == true)
+		{
+			Die();
+		}
 	}
 
 
@@ -75,6 +81,7 @@ public class PlayerStats : MonoBehaviour
 	public void Die()
 	{
 		PlayerStats.isInteractive = false;
+		PlayerStats.canDie = false;
 		
 		Component[] sprites;
 

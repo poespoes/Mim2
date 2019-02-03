@@ -29,14 +29,25 @@ public class Kill : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
+			PlayerStats.canDie = true;
 			if (other.GetComponent<PlayerStats>() != null && PlayerStats.mimLit==true && _typeOfDeath==TypeOfDeath.Vine)
 			{
-				Death(other.gameObject);
+				//Death(other.gameObject);
+
+				
 			}
 			else if(other.GetComponent<PlayerStats>() != null && PlayerStats.mimLit==false && _typeOfDeath==TypeOfDeath.OI)
 			{
 				Death(other.gameObject);
 			}
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			PlayerStats.canDie = false;
 		}
 	}
 
