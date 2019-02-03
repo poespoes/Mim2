@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 	public static Transform playerTransform;
 	public static GameObject player;
 	public static bool isInteractive;
+	public static float moveSpeed;
 
 
 	private void Awake()
@@ -22,12 +23,14 @@ public class PlayerStats : MonoBehaviour
 		isInteractive = true;
 		playerTransform = this.transform;
 		player = this.transform.gameObject;
+		
 	}
 	// Use this for initialization
 	
 	void Start ()
 	{
 		playerAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
+		moveSpeed = PlayerMovement.originalMoveSpeed;
 	}
 	
 	// Update is called once per frame
@@ -51,18 +54,21 @@ public class PlayerStats : MonoBehaviour
 			playerAnim.SetLayerWeight(0,1);
 			playerAnim.SetLayerWeight(1,0);
 			playerAnim.SetLayerWeight(2,0);
+			moveSpeed = PlayerMovement.originalMoveSpeed;
 		}
 		else if (fear == 1)
 		{
 			playerAnim.SetLayerWeight(0,0);
 			playerAnim.SetLayerWeight(1,1);
 			playerAnim.SetLayerWeight(2,0);
+			moveSpeed = PlayerMovement.originalMoveSpeed * 0.8f;
 		}
 		else if (fear == 2)
 		{
 			playerAnim.SetLayerWeight(0,0);
 			playerAnim.SetLayerWeight(1,0);
 			playerAnim.SetLayerWeight(2,1);
+			moveSpeed = PlayerMovement.originalMoveSpeed * 0.4f;
 		}
 		else
 		{

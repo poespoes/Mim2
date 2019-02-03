@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public float horizontal;
 	public float moveSpeed;
+	public static float originalMoveSpeed; //a static float that holds the original speed set for the player game object
+	
 	public float jump;
 	[Range(1,10)]
 	public float jumpForce;
@@ -29,7 +31,11 @@ public class PlayerMovement : MonoBehaviour
 	public SpriteRenderer[] spritesToFlip; //array of all the sprites that need to be flipped
 
 
-	
+	private void Awake()
+	{
+		originalMoveSpeed = moveSpeed;
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -42,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 	void Update ()
 	{
 
+		moveSpeed = PlayerStats.moveSpeed;
 		horizontal = Input.GetAxisRaw("Horizontal");
 		jump = Input.GetAxisRaw("Jump");
 		
