@@ -88,6 +88,10 @@ public class PlayerStats : MonoBehaviour
 	{
 		PlayerStats.isInteractive = false;
 		PlayerStats.canDie = false;
+		PlayerMovement.isClimbing = false;
+		PlayerMovement.canClimb = false;
+		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 		
 		Component[] sprites;
 

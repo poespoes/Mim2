@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			
 			
-			if (isClimbing == true && grounded==false && Input.GetAxisRaw("Vertical")!=0)
+			if (isClimbing == true && (grounded==false || Input.GetAxisRaw("Vertical")!=0))
 			{
 				Climb();
 			}
@@ -178,7 +178,8 @@ public class PlayerMovement : MonoBehaviour
 				anim.SetBool("isJumping",true);
 			}
 
-			
+			isClimbing = false;
+
 			//rb.velocity = Vector2.up * jumpForce*jump;
 		}
 		else if(jump>0)
