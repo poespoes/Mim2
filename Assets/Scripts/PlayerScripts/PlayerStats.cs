@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 	
 	public Animator playerAnim;
 
-	public int fear;
+	public static int fear;
 	public static bool mimLit; //if mim is lit or not
 	public static bool canDie; //if can die is true and the light is activated, the vine kills Mim
 	public static Transform playerTransform;

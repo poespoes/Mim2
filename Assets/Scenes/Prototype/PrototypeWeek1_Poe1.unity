@@ -683,6 +683,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 646854008}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &115083135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1960821232076618, guid: 72e71e0264d284f4ea354cd2799415b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504709381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &115083136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115083135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9a4eead7981914ebfdd5dc8e9164d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OILayer:
+    serializedVersion: 2
+    m_Bits: 512
+  scared: 0
+  veryScared: 0
+  scaredRadius: 10
+  veryscaredRadius: 6
 --- !u!1 &121472590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8345,18 +8370,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1709114086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1038358706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038358705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330c09ae9e486b843afa3bde6192c5d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1038358708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8383,6 +8396,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.55, y: 0.9121529}
   m_EdgeRadius: 0
+--- !u!114 &1038358709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038358705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330c09ae9e486b843afa3bde6192c5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1059512458
 GameObject:
   m_ObjectHideFlags: 0
@@ -15118,10 +15143,6 @@ PrefabInstance:
     - target: {fileID: 1655728745599524, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
       propertyPath: m_Name
       value: TestBottleOIMonster
-      objectReference: {fileID: 0}
-    - target: {fileID: 1655728745599524, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4641162199023674, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
       propertyPath: m_LocalPosition.x
