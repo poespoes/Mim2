@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
 	public SpriteRenderer[] spritesToFlip; //array of all the sprites that need to be flipped
 
+	public static bool canClimb;
+	public static bool isClimbing;
+	public bool _isClimbing;
+
 
 	private void Awake()
 	{
@@ -48,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 	void Update ()
 	{
 
+		_isClimbing = isClimbing;
 		moveSpeed = PlayerStats.moveSpeed;
 		horizontal = Input.GetAxisRaw("Horizontal");
 		jump = Input.GetAxisRaw("Jump");
@@ -60,7 +65,18 @@ public class PlayerMovement : MonoBehaviour
 		
 		if (PlayerStats.isInteractive==true)
 		{
-			Move();
+			
+			
+			
+			if (isClimbing == true && grounded==false && Input.GetAxisRaw("Vertical")!=0)
+			{
+				Climb();
+			}
+			else
+			{
+				Move();	
+			}
+			
 		}
 		
 		Jump();
@@ -101,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 				}
 			}
 			
-			
+			Debug.Log("Moving");
 			
 		}
 
@@ -115,11 +131,40 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetBool("isWalking",false);
 			
 			rb.velocity = new Vector2(horizontalSpeed,rb.velocity.y);
-
-
+	
+			Debug.Log("Not moving");
 		}
 	}
 
+	public void Climb()
+	{
+		rb.gravityScale = 0;
+		
+		if (Input.GetAxisRaw("Vertical") != 0)
+		{
+			//rb.constraints = RigidbodyConstraints2D.None;
+			//rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+			Debug.Log("The Climb is all there is");
+
+			rb.constraints = RigidbodyConstraints2D.None;
+			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+			
+			
+			rb.velocity =
+				new Vector2( rb.velocity.x,Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
+			
+			//rb.velocity = new Vector2(0,10f);
+		}
+		else
+		{
+			Debug.Log("Stopped climbing");
+			rb.velocity = Vector2.zero;
+			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+
+			//rb.constraints = RigidbodyConstraints2D.FreezeAll;
+		}
+	}
+	
 	public void Jump()
 	{
 		
