@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public Animator anim;
 
+	public SpriteRenderer[] spritesToFlip;
+
 	
 	// Use this for initialization
 	void Start ()
@@ -74,10 +76,21 @@ public class PlayerMovement : MonoBehaviour
 
 			if (Input.GetAxisRaw("Horizontal") > 0)
 			{
-				this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+
+				foreach (SpriteRenderer _sprite in spritesToFlip)
+				{
+					_sprite.flipX = false;
+				}
+				
+				
 			}else if (Input.GetAxisRaw("Horizontal") < 0)
 			{
-				this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
+				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
+				foreach (SpriteRenderer _sprite in spritesToFlip)
+				{
+					_sprite.flipX = true;
+				}
 			}
 			
 			
@@ -101,11 +114,27 @@ public class PlayerMovement : MonoBehaviour
 
 	public void Jump()
 	{
+		
+		
 		if (grounded == true)
 		{
 			rb.velocity = new Vector2(rb.velocity.x, jump * jumpForce);
 
+			if (jump > 0)
+			{
+				anim.SetBool("isJumping",true);
+			}
+
+			
 			//rb.velocity = Vector2.up * jumpForce*jump;
+		}
+		else if(jump>0)
+		{
+			//anim.SetBool("isJumping",true);
+		}
+		else
+		{
+			anim.SetBool("isJumping", false);
 		}
 		
 	}

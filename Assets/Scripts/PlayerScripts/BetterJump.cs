@@ -9,6 +9,7 @@ public class BetterJump : MonoBehaviour
 	public float lowJumpMultiplier = 2f;
 
 	private Rigidbody2D rb;
+	public Animator anim;
 
 	// Use this for initialization
 	void Start ()
@@ -24,6 +25,7 @@ public class BetterJump : MonoBehaviour
 		if (rb.velocity.y < 0)
 		{
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+			
 		}else if (rb.velocity.y>0 && !Input.GetButtonDown("Jump"))
 		{
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
