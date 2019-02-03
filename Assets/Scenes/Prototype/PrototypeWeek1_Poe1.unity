@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 244789534}
   - component: {fileID: 244789533}
   - component: {fileID: 244789532}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SafeZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6426,7 +6426,7 @@ GameObject:
   - component: {fileID: 732943349}
   - component: {fileID: 732943348}
   - component: {fileID: 732943347}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SafeZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11498,6 +11498,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114473073248739556, guid: 72e71e0264d284f4ea354cd2799415b8,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 307
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e71e0264d284f4ea354cd2799415b8, type: 3}
 --- !u!1 &1506139373
@@ -15126,7 +15131,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1655728745599524, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
       propertyPath: m_Name
-      value: Bottle
+      value: TestBottleOIMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655728745599524, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4641162199023674, guid: 7f9e305a668e3554f87ccab240d292a0, type: 3}
       propertyPath: m_LocalPosition.x

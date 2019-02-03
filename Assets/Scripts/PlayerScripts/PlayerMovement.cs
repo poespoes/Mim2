@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public SpriteRenderer[] spritesToFlip;
 
+
 	
 	// Use this for initialization
 	void Start ()
