@@ -20,8 +20,8 @@ public class OISpawner : MonoBehaviour
 
 	public enum TypeOfOI
 	{
-		Bottle,
-		Shoe
+		BottleOIMonster,
+		ShoeOIMonster
 
 	};
 
