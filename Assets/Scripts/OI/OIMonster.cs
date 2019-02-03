@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class OIMonster : MonoBehaviour
 {
@@ -11,10 +12,18 @@ public class OIMonster : MonoBehaviour
 	private Sequence chaseSequence;
 	private float chaseTime;
 	public float speed;
+	
+	[Range(1,10)]
+	public float rampUp;
+
+	
 
 	// Use this for initialization
 	void Start () {
-		
+		if (rampUp == 0)
+		{
+			rampUp = 2;
+		}
 	}
 	
 	// Update is called once per frame
@@ -41,7 +50,7 @@ public class OIMonster : MonoBehaviour
 			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
 			float step = speed * Time.deltaTime;
 			transform.position = Vector2.MoveTowards(transform.position, PlayerStats.playerTransform.position, step);
-			speed += 2*Time.deltaTime;
+			speed += rampUp*Time.deltaTime;
 
 
 
