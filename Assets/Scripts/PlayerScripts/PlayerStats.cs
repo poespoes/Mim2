@@ -16,6 +16,8 @@ public class PlayerStats : MonoBehaviour
 	public static GameObject player;
 	public static bool isInteractive;
 	public static float moveSpeed;
+    public float fear1multiplier;
+    public float fear2multiplier;
 
 
 	private void Awake()
@@ -61,14 +63,14 @@ public class PlayerStats : MonoBehaviour
 			playerAnim.SetLayerWeight(0,0);
 			playerAnim.SetLayerWeight(1,1);
 			playerAnim.SetLayerWeight(2,0);
-			moveSpeed = PlayerMovement.originalMoveSpeed * 0.8f;
+			moveSpeed = PlayerMovement.originalMoveSpeed * fear1multiplier;
 		}
 		else if (fear == 2)
 		{
 			playerAnim.SetLayerWeight(0,0);
 			playerAnim.SetLayerWeight(1,0);
 			playerAnim.SetLayerWeight(2,1);
-			moveSpeed = PlayerMovement.originalMoveSpeed * 0.4f;
+			moveSpeed = PlayerMovement.originalMoveSpeed * fear2multiplier;
 		}
 		else
 		{
