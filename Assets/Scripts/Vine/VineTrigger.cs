@@ -24,7 +24,21 @@ public class VineTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             _VineChase.isTriggered = true;
+            _VineChase.target = PlayerStats.playerTransform;
         }
+        
+        if (other.gameObject.GetComponent<GlowingLight>() != null)
+        {
+            Debug.Log("Light Object Found");
+                
+            if (other.gameObject.GetComponent<GlowingLight>().objectLit == true)
+            {
+                _VineChase.isTriggered = true;
+                _VineChase.target = other.transform;
+            }
+        }
+  
+           
       
     }
 
@@ -33,6 +47,7 @@ public class VineTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             _VineChase.isTriggered = false;
+            _VineChase.target = null;
         }
     }
 }

@@ -8,9 +8,13 @@ public class VineChase : MonoBehaviour
 	public float maxDistance;
 	public float speed;
 	public bool isTriggered;
+	public Transform target;
+	public bool lighObjectFound;
+	public Transform distraction; 
 
 	// Use this for initialization
 	void Start () {
+		
 		
 	}
 	
@@ -20,27 +24,42 @@ public class VineChase : MonoBehaviour
 		{
 			Chase();
 		}
+	
 		
 	}
 
 	void Chase()
 	{
 		currentDistance = Vector2.Distance(PlayerStats.playerTransform.position, this.transform.position);
-		if (PlayerStats.mimLit == true)
+		if (lighObjectFound == false)
 		{
-			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
-			float step = speed * Time.deltaTime;
-			transform.position = Vector2.MoveTowards(transform.position, PlayerStats.playerTransform.position, step);
-			speed += Time.deltaTime;
+			if (target.gameObject.tag==("Player") && PlayerStats.mimLit == true)
+			{
+				//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
+				float step = speed * Time.deltaTime;
+				transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+				speed += Time.deltaTime;
 
 
+			}
+		}
+		
+		else if(lighObjectFound==true)
+		{
+			//chaseSequence.Kill();
+			if (distraction.GetComponent<GlowingLight>().objectLit==true)
+			{
+				Debug.Log("Chasing distraction");
+				target = distraction;
+				float step = speed * Time.deltaTime;
+				transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+				speed += Time.deltaTime;
+			}
+			
 		}
 		else
 		{
 			this.transform.position = this.transform.position;
-			
-
-			//chaseSequence.Kill();
 		}
 	}
 }
