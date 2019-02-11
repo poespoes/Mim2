@@ -6,6 +6,7 @@ public class GlowingLight : MonoBehaviour
 {
 
     public bool objectLit;
+    public VineChase vineChase;
     
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,10 @@ public class GlowingLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (vineChase != null)
+        {
+            vineChase.isTriggered = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

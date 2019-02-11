@@ -24,6 +24,7 @@ public class VineTargetOverdrive : MonoBehaviour
         {
             _vineChase.lighObjectFound = true;
             _vineChase.distraction = other.transform;
+            other.GetComponent<GlowingLight>().vineChase = _vineChase;
             Debug.Log("Distraction found");
         }
     }

@@ -20,6 +20,12 @@ public class VineChase : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (distraction != null)
+		{
+			target = distraction;
+		}
+		
 		if (isTriggered==true)
 		{
 			Chase();
@@ -30,7 +36,15 @@ public class VineChase : MonoBehaviour
 
 	void Chase()
 	{
-		currentDistance = Vector2.Distance(PlayerStats.playerTransform.position, this.transform.position);
+		if (target != null)
+		{
+			currentDistance = Vector2.Distance(target.transform.position, this.transform.position);
+		}
+		else
+		{
+			currentDistance = 0;
+		}
+		
 		if (lighObjectFound == false)
 		{
 			if (target.gameObject.tag==("Player") && PlayerStats.mimLit == true)
@@ -52,7 +66,19 @@ public class VineChase : MonoBehaviour
 				Debug.Log("Chasing distraction");
 				target = distraction;
 				float step = speed * Time.deltaTime;
-				transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+
+				float stoppingDistance = 2;
+				if (currentDistance > stoppingDistance)
+				{
+					transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+				}
+				else
+				{
+					this.transform.position = this.transform.position;
+				}
+				
+				
+				
 				speed += Time.deltaTime;
 			}
 			
