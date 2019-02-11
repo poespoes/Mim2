@@ -26,7 +26,7 @@ public class VineChase : MonoBehaviour
 			target = distraction;
 		}
 		
-		if (isTriggered==true)
+		if (isTriggered==true || distraction!=null)
 		{
 			Chase();
 		}
@@ -61,26 +61,25 @@ public class VineChase : MonoBehaviour
 		else if(lighObjectFound==true)
 		{
 			//chaseSequence.Kill();
-			if (distraction.GetComponent<GlowingLight>().objectLit==true)
-			{
-				Debug.Log("Chasing distraction");
-				target = distraction;
-				float step = speed * Time.deltaTime;
+		
+			Debug.Log("Chasing distraction");
+			target = distraction;
+			float step = speed * Time.deltaTime;
 
-				float stoppingDistance = 2;
-				if (currentDistance > stoppingDistance)
-				{
-					transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-				}
-				else
-				{
-					this.transform.position = this.transform.position;
-				}
-				
-				
-				
-				speed += Time.deltaTime;
+			float stoppingDistance = 2;
+			if (currentDistance > stoppingDistance)
+			{
+				transform.position = Vector2.MoveTowards(transform.position, target.position, step);
 			}
+			else
+			{
+				this.transform.position = this.transform.position;
+			}
+				
+				
+				
+			speed += Time.deltaTime;
+			
 			
 		}
 		else

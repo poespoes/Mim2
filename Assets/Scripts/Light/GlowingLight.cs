@@ -19,7 +19,7 @@ public class GlowingLight : MonoBehaviour
     {
         if (vineChase != null)
         {
-            vineChase.isTriggered = true;
+           // vineChase.isTriggered = true;
         }
     }
 
