@@ -10,7 +10,8 @@ public class VineChase : MonoBehaviour
 	public bool isTriggered;
 	public Transform target;
 	public bool lighObjectFound;
-	public Transform distraction; 
+	public Transform distraction;
+	public Transform tip;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +39,7 @@ public class VineChase : MonoBehaviour
 	{
 		if (target != null)
 		{
-			currentDistance = Vector2.Distance(target.transform.position, this.transform.position);
+			currentDistance = Vector2.Distance(target.transform.position, tip.transform.position);
 		}
 		else
 		{
