@@ -41,6 +41,10 @@ public class Kill : MonoBehaviour
 				Death(other.gameObject);
 			}
 		}
+		else if (other.GetComponent<GlowingLight>() != null)
+		{
+			other.GetComponent<GlowingLight>().LightOff();
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D other)
