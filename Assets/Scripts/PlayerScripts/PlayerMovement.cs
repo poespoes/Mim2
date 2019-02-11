@@ -171,6 +171,26 @@ public class PlayerMovement : MonoBehaviour
 
 			//rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
+		
+		if (Input.GetAxisRaw("Horizontal") > 0)
+		{
+			//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+
+			foreach (SpriteRenderer _sprite in spritesToFlip)
+			{
+				_sprite.flipX = false;
+			}
+				
+				
+		}else if (Input.GetAxisRaw("Horizontal") < 0)
+		{
+			//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
+			foreach (SpriteRenderer _sprite in spritesToFlip)
+			{
+				_sprite.flipX = true;
+			}
+		}
+
 	}
 	
 	public void Jump()
