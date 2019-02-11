@@ -18,9 +18,9 @@ public class VineTargetOverdrive : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.GetComponent<GlowingLight>() == true)
+        if (other.gameObject.tag == "LightObject" && other.GetComponent<GlowingLight>() == true)
         {
             _vineChase.lighObjectFound = true;
             _vineChase.distraction = other.transform;
