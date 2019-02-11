@@ -94,6 +94,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Move()
 	{
+		anim.SetBool("isClimbing",false);
+
+		
 		if (Input.GetAxisRaw("Horizontal") != 0)
 		{
 			//rb.constraints = RigidbodyConstraints2D.None;
@@ -146,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public void Climb()
 	{
+		anim.SetBool("isClimbing",true);
+		
 		rb.gravityScale = 0;
 		
 		if (Input.GetAxisRaw("Vertical") != 0||Input.GetAxisRaw("Horizontal") != 0)
