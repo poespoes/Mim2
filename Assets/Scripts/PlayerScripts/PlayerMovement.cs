@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			
 			
-			if (isClimbing == true && (grounded==false || Input.GetAxisRaw("Vertical")!=0))
+			if (isClimbing == true && (grounded==false || Input.GetAxisRaw("Vertical")!=0 || Input.GetAxisRaw("Horizontal")!=0))
 			{
 				Climb();
 			}
@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		rb.gravityScale = 0;
 		
-		if (Input.GetAxisRaw("Vertical") != 0)
+		if (Input.GetAxisRaw("Vertical") != 0||Input.GetAxisRaw("Horizontal") != 0)
 		{
 			//rb.constraints = RigidbodyConstraints2D.None;
 			//rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			
 			rb.velocity =
-				new Vector2( rb.velocity.x,Mathf.Lerp(Input.GetAxis("horizontal") * moveSpeed, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
+				new Vector2( Input.GetAxis("Horizontal") * moveSpeed,Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
 			
 			//rb.velocity = new Vector2(0,10f);
 		}
