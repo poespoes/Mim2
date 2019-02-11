@@ -47,6 +47,8 @@ public class GlowingLight : MonoBehaviour
         objectLit = true;
         this.GetComponent<Animator>().SetBool("LightON",true);
         this.GetComponent<Animator>().SetBool("LightOFF",false);
+        this.GetComponent<BoxCollider2D>().isTrigger = true;
+        this.gameObject.tag = "LightObject";    //Poe added this to let the vine chase light object
     }
 
     public void LightOff()
