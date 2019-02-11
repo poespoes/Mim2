@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 	public static bool isClimbing;
 	public bool _isClimbing;
 
+	public float gravityScale;
+
 
 	private void Awake()
 	{
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
 		anim = this.GetComponent<Animator>();
 		rb = this.GetComponent<Rigidbody2D>();
+		gravityScale = rb.gravityScale;
 	}
 	
 	// Update is called once per frame
@@ -80,7 +83,12 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		Jump();
-		
+
+		if (Input.GetKeyDown(KeyCode.E)) //stop climbing
+		{
+			isClimbing = false;
+			rb.gravityScale = gravityScale;
+		}
 		
 	}
 
