@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			
 			rb.velocity =
-				new Vector2( rb.velocity.x,Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
+				new Vector2( rb.velocity.x,Mathf.Lerp(Input.GetAxis("horizontal") * moveSpeed, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
 			
 			//rb.velocity = new Vector2(0,10f);
 		}
