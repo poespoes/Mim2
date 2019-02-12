@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 	public static float originalMoveSpeed; //a static float that holds the original speed set for the player game object
 	
 	public float jump;
-	[Range(1,10)]
+	[Range(1,30)]
 	public float jumpForce;
 	
 	
