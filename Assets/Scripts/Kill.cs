@@ -10,7 +10,8 @@ public class Kill : MonoBehaviour
 	public enum TypeOfDeath
 	{
 		OI,
-		Vine
+		Vine,
+		DeathOnTouch
 	}
 
 	public TypeOfDeath _typeOfDeath;
