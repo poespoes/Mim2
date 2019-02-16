@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 	public float moveSpeed;
 	public static float originalMoveSpeed; //a static float that holds the original speed set for the player game object
 	
+	
+	
 	public float jump;
 	[Range(1,30)]
 	public float jumpForce;
@@ -82,6 +84,10 @@ public class PlayerMovement : MonoBehaviour
 				Move();	
 			}
 			
+		}
+		else
+		{
+			Debug.Log("Player can't move");
 		}
 		
 		Jump();
@@ -243,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
 		
 	}
 
-	public IEnumerator Landed()
+	/*public IEnumerator Landed()
 	{
 		yield return new WaitForSeconds(0.1f);
 		bool isJumping = anim.GetBool("isJumping");
@@ -251,18 +257,18 @@ public class PlayerMovement : MonoBehaviour
 		{
 			anim.SetBool("isJumping", false);
 		}
-	}
+	}*/ //not being used
 	
 	public void SetAnimationStage()
 	{
 		
 		if (grounded == false)
 		{
-			
-			if (rb.velocity.y !=0 && jump == 0)
+			timeFalling += Time.deltaTime;
+			if (rb.velocity.y !=0 && jump == 0) //if you haven't pressed the jump button or if you are not on ground
 			{
 				anim.SetBool("isFalling", true);
-				timeFalling += Time.deltaTime;
+				
 				anim.SetFloat("timeFallen",timeFalling);
 
 				if (timeFalling > longFallThreshold)
@@ -278,9 +284,36 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetBool("isFalling", false);
 			timeFalling = 0;
 			anim.SetFloat("timeFallen",timeFalling);
-			anim.SetBool("longFall", false);
+			if (anim.GetBool("longFall") == true)
+			{
+				HardLanding();
+			}
+			
+			
 			
 		}
 	}
-	
+
+	public void HardLanding()
+	{
+		Debug.Log("Freeze movement");
+		PlayerStats.isInteractive = false;
+		moveSpeed = 0;
+		rb.velocity = new Vector2(0,0);
+		moveSpeed = 0;
+	}
+
+	public void DisableMovement()
+	{
+		Debug.Log("Freeze movement");
+		PlayerStats.isInteractive = false;
+		rb.velocity = new Vector2(0,0);
+		moveSpeed = 0;
+	}
+	public void EnableMovement()
+	{
+		PlayerStats.isInteractive = true;
+		moveSpeed = originalMoveSpeed;
+		anim.SetBool("longFall", false);
+	}
 }
