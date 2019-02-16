@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
 			isClimbing = false;
 			rb.gravityScale = gravityScale;
 		}
+
 		
 		
 		
@@ -230,7 +231,26 @@ public class PlayerMovement : MonoBehaviour
 		{
 			anim.SetBool("isJumping", false);
 		}
+		else
+		{
+			if (jump == 0)
+			{
+				anim.SetBool("isJumping", false);
+			}
+			
+		}
 		
+		
+	}
+
+	public IEnumerator Landed()
+	{
+		yield return new WaitForSeconds(0.1f);
+		bool isJumping = anim.GetBool("isJumping");
+		if (isJumping == true && grounded == true)
+		{
+			anim.SetBool("isJumping", false);
+		}
 	}
 	
 	public void SetAnimationStage()
@@ -239,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
 		if (grounded == false)
 		{
 			
-			if (rb.velocity.y < -2f)
+			if (rb.velocity.y !=0 && jump == 0)
 			{
 				anim.SetBool("isFalling", true);
 				timeFalling += Time.deltaTime;
