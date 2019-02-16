@@ -83,12 +83,15 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		Jump();
+		SetAnimationStage();
 
 		if (Input.GetKeyDown(KeyCode.E)) //stop climbing
 		{
 			isClimbing = false;
 			rb.gravityScale = gravityScale;
 		}
+		
+		
 		
 	}
 
@@ -197,6 +200,8 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 	}
+
+	
 	
 	public void Jump()
 	{
@@ -219,10 +224,27 @@ public class PlayerMovement : MonoBehaviour
 		{
 			//anim.SetBool("isJumping",true);
 		}
-		else
+		else if(rb.velocity.y<=0)
 		{
 			anim.SetBool("isJumping", false);
 		}
 		
 	}
+	
+	public void SetAnimationStage()
+	{
+		if (grounded == false)
+		{
+			if (rb.velocity.y < -2f)
+			{
+				anim.SetBool("isFalling", true);
+			}
+			
+		}
+		else
+		{
+			anim.SetBool("isFalling", false);
+		}
+	}
+	
 }
