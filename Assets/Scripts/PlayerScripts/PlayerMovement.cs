@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public float gravityScale;
 
+	public float longFallThreshold; //the time after which long fall is initiated
+	public float timeFalling; //how long Mim has been airborne
 
 	private void Awake()
 	{
@@ -233,17 +235,31 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void SetAnimationStage()
 	{
+		
 		if (grounded == false)
 		{
+			
 			if (rb.velocity.y < -2f)
 			{
 				anim.SetBool("isFalling", true);
+				timeFalling += Time.deltaTime;
+				anim.SetFloat("timeFallen",timeFalling);
+
+				if (timeFalling > longFallThreshold)
+				{
+					anim.SetBool("longFall", true);
+				}
+				
 			}
 			
 		}
 		else
 		{
 			anim.SetBool("isFalling", false);
+			timeFalling = 0;
+			anim.SetFloat("timeFallen",timeFalling);
+			anim.SetBool("longFall", false);
+			
 		}
 	}
 	
