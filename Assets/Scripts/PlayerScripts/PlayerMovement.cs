@@ -12,31 +12,31 @@ public class PlayerMovement : MonoBehaviour
 	
 	
 	
-	public float jump;
+	public float jump; //the input jump axis goes from 0 (not pressing jump) to 1 (pressing jump)
 	[Range(1,30)]
-	public float jumpForce;
+	public float jumpForce; //upcoming fighting game starring Shohnen Jump characters
 	
 	
 	public bool grounded;
-	public bool leftSideCollision;
+	public bool leftSideCollision; //I have no idea what these are doing
 	public bool rightSideCollision;
 
 
 	private Rigidbody2D rb;
 
-	public LayerMask groundDetectionLayer;
-	public float groundRadius;
-	public Transform groundPoint;
+	public LayerMask groundDetectionLayer; //the layermask to detect ground
+	public float groundRadius; //the radius of the ground detection
+	public Transform groundPoint;//the point at which mim's feet are detected 
 
 	public Animator anim;
 
 	public SpriteRenderer[] spritesToFlip; //array of all the sprites that need to be flipped
 
-	public static bool canClimb;
-	public static bool isClimbing;
-	public bool _isClimbing;
+	public static bool canClimb; //Mim is within the trigger of a climbable object
+	public static bool isClimbing; //Mim is climbing - static bool
+	public bool _isClimbing; //Mim is climbing, non static
 
-	public float gravityScale;
+	public float gravityScale; //saves the player rigidbody's gravity scale
 
 	public float longFallThreshold; //the time after which long fall is initiated
 	public float timeFalling; //how long Mim has been airborne
