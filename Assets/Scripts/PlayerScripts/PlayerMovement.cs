@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D rb;
 
 	public LayerMask groundDetectionLayer; //the layermask to detect ground
-	public float groundRadius; //the radius of the ground detection
+	public float groundRadius; //the radius of the ground detection THE DEFAULT is 0.2f
 	public Transform groundPoint;//the point at which mim's feet are detected 
 
 	public Animator anim;
@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
 			rb.gravityScale = gravityScale;
 		}
 
-		
+		NormalizeSlope();
 		
 		
 	}
@@ -265,7 +265,7 @@ public class PlayerMovement : MonoBehaviour
 		if (grounded == false)
 		{
 			timeFalling += Time.deltaTime;
-			if (rb.velocity.y !=0 && jump == 0) //if you haven't pressed the jump button or if you are not on ground
+			if (rb.velocity.y !=0 && jump == 0 && timeFalling>0.11f) //if you haven't pressed the jump button or if you are not on ground
 			{
 				anim.SetBool("isFalling", true);
 				
@@ -315,5 +315,24 @@ public class PlayerMovement : MonoBehaviour
 		PlayerStats.isInteractive = true;
 		moveSpeed = originalMoveSpeed;
 		anim.SetBool("longFall", false);
+	}
+	
+	void NormalizeSlope () {
+		// Attempt vertical normalization
+		if (grounded) {
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1f, groundDetectionLayer);
+         
+			if (hit.collider != null && Mathf.Abs(hit.normal.x) > 0.1f) {
+				Rigidbody2D body = GetComponent<Rigidbody2D>();
+				// Apply the opposite force against the slope force 
+				// You will need to provide your own slopeFriction to stabalize movement
+				body.velocity = new Vector2(body.velocity.x - (hit.normal.x * 20), body.velocity.y);
+ 
+				//Move Player up or down to compensate for the slope below them
+				Vector3 pos = transform.position;
+				pos.y += -hit.normal.x * Mathf.Abs(body.velocity.x) * Time.deltaTime * (body.velocity.x - hit.normal.x > 0 ? 1 : -1);
+				transform.position = pos;
+			}
+		}
 	}
 }

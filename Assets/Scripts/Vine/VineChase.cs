@@ -12,11 +12,15 @@ public class VineChase : MonoBehaviour
 	public bool lighObjectFound;
 	public Transform distraction;
 	public Transform tip;
+	public bool forceChase;
+
+	public float fasterSpeed;
 
 	// Use this for initialization
-	void Start () {
-		
-		
+	void Start ()
+	{
+
+		fasterSpeed = speed * 2;
 	}
 	
 	// Update is called once per frame
@@ -31,8 +35,18 @@ public class VineChase : MonoBehaviour
 		{
 			Chase();
 		}
-	
-		
+
+		if (forceChase == true)
+		{
+			Chase();
+		}
+
+		if (target.GetComponent<GlowingLight>() != null)
+		{
+			speed = fasterSpeed;
+		}
+
+
 	}
 
 	void Chase()

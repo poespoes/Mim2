@@ -9,6 +9,7 @@ public class GlowingLight : MonoBehaviour
     public bool objectLit;
     public VineChase vineChase;
     public bool hasDied;
+    public bool forceLight;
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,11 @@ public class GlowingLight : MonoBehaviour
             LightUp();
             
         }
-        
+        else if (forceLight == true)
+        {
+            LightUp();
+
+        }
         
     }
 
@@ -49,6 +54,7 @@ public class GlowingLight : MonoBehaviour
         this.GetComponent<Animator>().SetBool("LightOFF",false);
         this.GetComponent<BoxCollider2D>().isTrigger = true;
         this.gameObject.tag = "LightObject";    //Poe added this to let the vine chase light object
+        
     }
 
     public void LightOff()
