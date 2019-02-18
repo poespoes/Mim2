@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2
+  m_Length: 2.000001
   m_ChildTransform: {fileID: 1777543942855020062}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1777543943228556525
@@ -2101,7 +2101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1777543943228556524}
   - component: {fileID: 1777543943228556527}
-  - component: {fileID: 6172077710456824101}
   m_Layer: 0
   m_Name: New bone14
   m_TagString: Untagged
@@ -2140,21 +2139,6 @@ MonoBehaviour:
   m_Length: 1.9999988
   m_ChildTransform: {fileID: 1777543943419297833}
   m_AttachedIK: {fileID: 0}
---- !u!114 &6172077710456824101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777543943228556525}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3034d1009dcb3e499652046d6912190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 10
-  distance: 0
-  currentPos: {fileID: 0}
 --- !u!1 &1777543943401143326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2148,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777543943401143321}
+  - component: {fileID: 1020144244}
+  - component: {fileID: 1020144245}
   m_Layer: 0
   m_Name: RiggedVine
   m_TagString: Untagged
@@ -2187,6 +2173,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1020144244
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943401143326}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.601576, y: 3.1340942}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 29.10176, y: 13.902473}
+  m_EdgeRadius: 0
+--- !u!114 &1020144245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943401143326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94888cb8cfded84eadcd65431215a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _VineChase: {fileID: 872142407}
 --- !u!1 &1777543943419297838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2223,12 @@ GameObject:
   - component: {fileID: 1777543943419297833}
   - component: {fileID: 1777543943419297832}
   - component: {fileID: 8823512119949855770}
+  - component: {fileID: 872142406}
+  - component: {fileID: 872142410}
+  - component: {fileID: 872142405}
+  - component: {fileID: 872142404}
+  - component: {fileID: 872142407}
+  - component: {fileID: 872142409}
   m_Layer: 0
   m_Name: New bone15
   m_TagString: Untagged
@@ -2242,12 +2273,132 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777543943419297838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 503f2dca5695b17419738e89eb047c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!50 &872142406
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &872142410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!233 &872142405
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -2.4709682, y: -15.630923}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!114 &872142404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e6c994ff5fddc47912353da6cbca6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vineChase: {fileID: 0}
+--- !u!114 &872142407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba02aacbbeda14487640e3d897d899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDistance: 0
+  maxDistance: 0
+  speed: 0
+  isTriggered: 0
+  target: {fileID: 0}
+  lighObjectFound: 0
+  distraction: {fileID: 0}
+  tip: {fileID: 1777543943419297833}
+  forceChase: 0
+  fasterSpeed: 0
+--- !u!114 &872142409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777543943419297838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd1cc271971c146b448622de37b4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDeath: 0
+  _typeOfDeath: 1
 --- !u!1 &1777543943448026581
 GameObject:
   m_ObjectHideFlags: 0

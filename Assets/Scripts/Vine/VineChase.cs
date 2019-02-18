@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class VineChase : MonoBehaviour
@@ -53,6 +54,9 @@ public class VineChase : MonoBehaviour
 	{
 		if (target != null)
 		{
+			//transform.DOLookAt(target.transform.position, 1);
+			transform.right = target.position - transform.position;
+			
 			currentDistance = Vector2.Distance(target.transform.position, tip.transform.position);
 		}
 		else
