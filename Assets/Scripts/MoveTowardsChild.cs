@@ -15,7 +15,7 @@ public class MoveTowardsChild : MonoBehaviour
     {
         if (maxDistance == 0)
         {
-            maxDistance = 3;
+            maxDistance = 30;
         }
     }
 
@@ -25,7 +25,10 @@ public class MoveTowardsChild : MonoBehaviour
         distance = Vector2.Distance(this.transform.position,PlayerStats.player.transform.position);
         if (distance > maxDistance)
         {
+            
             this.transform.DOMove(PlayerStats.player.transform.position,5);
+            //this.transform.DOMove(this.gameObject.transform.GetChild(0).transform.position, 5);
+           
             currentPos = this.transform;
         }
         else

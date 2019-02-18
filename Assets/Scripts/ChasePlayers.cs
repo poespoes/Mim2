@@ -16,7 +16,7 @@ public class ChasePlayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 tipPos = new Vector3(player.transform.position.x,player.transform.position.y,this.transform.position.z);
+        Vector3 tipPos = new Vector3(player.transform.position.x,player.transform.position.y,0);
         this.transform.DOMove(tipPos, 5);
     }
 }
