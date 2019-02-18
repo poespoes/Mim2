@@ -45,6 +45,14 @@ public class GlowingLight : MonoBehaviour
             Debug.Log("Playere entered");
             canBeLit = true;
         }
+
+        else if (other.CompareTag("Vine"))
+        {
+            Debug.Log("Vine entered");
+            
+            this.transform.parent.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            
+        }
     }
 
     public void LightUp()

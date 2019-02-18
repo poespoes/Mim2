@@ -42,11 +42,12 @@ public class VineChase : MonoBehaviour
 			Chase();
 		}
 
-		/*if (target.GetComponent<GlowingLight>() != null)
+		if (target.GetComponent<GlowingLight>() != null)
 		{
-			speed = fasterSpeed;
-		}*/
-
+			speed = 10;
+		}
+		
+		
 
 	}
 

@@ -6715,6 +6715,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439624872}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &447322816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7581503255020645847, guid: 29f9239d91e1e114ba47fa281b1d24df,
+    type: 3}
+  m_PrefabInstance: {fileID: 7581503254739977832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &447322817
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447322816}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &448050604
 GameObject:
   m_ObjectHideFlags: 0
@@ -31776,6 +31803,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1777543943419297838, guid: b61e06dc6db0c93409a9a964df8e2ab4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vine
+      objectReference: {fileID: 0}
     - target: {fileID: 1777543941787235407, guid: b61e06dc6db0c93409a9a964df8e2ab4,
         type: 3}
       propertyPath: m_Mesh
@@ -31949,5 +31981,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.21
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7581503255020645805, guid: 29f9239d91e1e114ba47fa281b1d24df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29f9239d91e1e114ba47fa281b1d24df, type: 3}
