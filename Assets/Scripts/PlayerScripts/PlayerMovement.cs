@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 	public static bool climbToggle;
 
 	public float gravityScale; //saves the player rigidbody's gravity scale
+	private float originalGravityScale; //the gravity scale at the beginning 
 
 	public float longFallThreshold; //the time after which long fall is initiated
 	public float timeFalling; //how long Mim has been airborne
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 	private void Awake()
 	{
 		originalMoveSpeed = moveSpeed;
+		originalGravityScale = gravityScale;
 	}
 
 	// Use this for initialization
@@ -230,11 +232,12 @@ public class PlayerMovement : MonoBehaviour
 		
 		if (grounded == true)
 		{
-			rb.velocity = new Vector2(rb.velocity.x, jump * jumpForce);
+			//rb.velocity = new Vector2(rb.velocity.x, jump * jumpForce); //comment this back in if jump is an issue 
 
 			if (jump > 0)
 			{
 				anim.SetBool("isJumping",true);
+				rb.velocity = new Vector2(rb.velocity.x, jump * jumpForce); //comment this out if jump is an issue
 			}
 
 			if (Input.GetAxisRaw("Vertical") < 0)
@@ -249,6 +252,10 @@ public class PlayerMovement : MonoBehaviour
 		else if(jump>0)
 		{
 			//anim.SetBool("isJumping",true);
+			/*climbToggle = false;
+			isClimbing = false;
+			this.GetComponent<Rigidbody2D>().gravityScale = originalGravityScale;*/   //Figure out how to jump when climbing here
+
 		}
 		else if(rb.velocity.y<=0)
 		{
