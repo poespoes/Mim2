@@ -18,10 +18,11 @@ public class climbable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerMovement.canClimb == true &&( Input.GetAxisRaw("Vertical")!=0))
+        if (PlayerMovement.canClimb == true && Input.GetAxisRaw("Vertical")>0)
         {
             PlayerMovement.isClimbing = true;
-            
+            PlayerMovement.climbToggle = true;
+
         }
         else if ((PlayerMovement.canClimb == true))
         {
@@ -50,6 +51,7 @@ public class climbable : MonoBehaviour
         {
             PlayerMovement.canClimb = false;
             PlayerMovement.isClimbing = false;
+            PlayerMovement.climbToggle = false;
             other.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
 
         }

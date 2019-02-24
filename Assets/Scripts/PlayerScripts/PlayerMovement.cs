@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 	public static bool canClimb; //Mim is within the trigger of a climbable object
 	public static bool isClimbing; //Mim is climbing - static bool
 	public bool _isClimbing; //Mim is climbing, non static
+	public static bool climbToggle;
 
 	public float gravityScale; //saves the player rigidbody's gravity scale
 
@@ -162,53 +163,59 @@ public class PlayerMovement : MonoBehaviour
 
 	public void Climb()
 	{
-		anim.SetBool("isClimbing",true);
-		
-		rb.gravityScale = 0;
-		
-		if (Input.GetAxisRaw("Vertical") != 0||Input.GetAxisRaw("Horizontal") != 0)
+		if (climbToggle == true)
 		{
-			//rb.constraints = RigidbodyConstraints2D.None;
-			//rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-			Debug.Log("The Climb is all there is");
 
-			rb.constraints = RigidbodyConstraints2D.None;
-			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-			
-			
-			rb.velocity =
-				new Vector2( Input.GetAxis("Horizontal") * moveSpeed,Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
-			
-			//rb.velocity = new Vector2(0,10f);
-		}
-		else
-		{
-			Debug.Log("Stopped climbing");
-			rb.velocity = Vector2.zero;
-			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
 
-			//rb.constraints = RigidbodyConstraints2D.FreezeAll;
-		}
-		
-		if (Input.GetAxisRaw("Horizontal") > 0)
-		{
-			//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+			anim.SetBool("isClimbing", true);
 
-			foreach (SpriteRenderer _sprite in spritesToFlip)
+			rb.gravityScale = 0;
+
+			if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
 			{
-				_sprite.flipX = false;
+				//rb.constraints = RigidbodyConstraints2D.None;
+				//rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+				Debug.Log("The Climb is all there is");
+
+				rb.constraints = RigidbodyConstraints2D.None;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+
+				rb.velocity =
+					new Vector2(Input.GetAxis("Horizontal") * moveSpeed,
+						Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
+
+				//rb.velocity = new Vector2(0,10f);
 			}
-				
-				
-		}else if (Input.GetAxisRaw("Horizontal") < 0)
-		{
-			//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
-			foreach (SpriteRenderer _sprite in spritesToFlip)
+			else
 			{
-				_sprite.flipX = true;
+				Debug.Log("Stopped climbing");
+				rb.velocity = Vector2.zero;
+				rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+
+				//rb.constraints = RigidbodyConstraints2D.FreezeAll;
+			}
+
+			if (Input.GetAxisRaw("Horizontal") > 0)
+			{
+				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+
+				foreach (SpriteRenderer _sprite in spritesToFlip)
+				{
+					_sprite.flipX = false;
+				}
+
+
+			}
+			else if (Input.GetAxisRaw("Horizontal") < 0)
+			{
+				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
+				foreach (SpriteRenderer _sprite in spritesToFlip)
+				{
+					_sprite.flipX = true;
+				}
 			}
 		}
-
 	}
 
 	
@@ -218,6 +225,7 @@ public class PlayerMovement : MonoBehaviour
 		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0)
 		{
 			grounded = false;
+			climbToggle = true;
 		}
 		
 		if (grounded == true)
@@ -232,6 +240,7 @@ public class PlayerMovement : MonoBehaviour
 			if (Input.GetAxisRaw("Vertical") < 0)
 			{
 				isClimbing = false;
+				climbToggle = false;
 
 			}
 			
