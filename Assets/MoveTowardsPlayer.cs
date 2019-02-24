@@ -25,7 +25,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTriggered == true)
+        if (isTriggered == true && target!=null)
         {
             Chase();
             vineSine.enabled = false;
@@ -33,6 +33,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         else
         {
             vineSine.enabled = true;
+            this.transform.position = this.transform.position;
         }
     }
 
