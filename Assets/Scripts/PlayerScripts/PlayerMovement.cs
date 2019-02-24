@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{	
+		
 		grounded = Physics2D.OverlapCircle(groundPoint.transform.position,groundRadius,groundDetectionLayer);
 		
 		if (PlayerStats.isInteractive==true)
@@ -214,7 +215,10 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void Jump()
 	{
-		
+		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0)
+		{
+			grounded = false;
+		}
 		
 		if (grounded == true)
 		{

@@ -23,10 +23,13 @@ public class climbable : MonoBehaviour
             PlayerMovement.isClimbing = true;
             
         }
-
-        if ((PlayerMovement.canClimb == true))
+        else if ((PlayerMovement.canClimb == true))
         {
-            
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                PlayerMovement.isClimbing = true;
+                //PlayerStats.player.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
+            }
         }
         
         
