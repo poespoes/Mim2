@@ -11,6 +11,7 @@ public class FearControl : MonoBehaviour
 
 	public float scaredRadius;
 	public float veryscaredRadius;
+	public bool unAfraid;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,12 @@ public class FearControl : MonoBehaviour
 		
 		veryScared = Physics2D.OverlapCircle(this.transform.position,veryscaredRadius,OILayer);
 		
+		unAfraid = Physics2D.OverlapCircle(this.transform.position,scaredRadius,OILayer);
+		
 		FearCheck();
+
+		LightLessFear();
+		
 	}
 
 	void FearCheck()
@@ -38,7 +44,27 @@ public class FearControl : MonoBehaviour
 		}
 		else
 		{
-			PlayerStats.fear = 0;
+			//PlayerStats.fear = 0;
 		}
 	}
+
+	void LightLessFear()
+	{
+		if (PlayerStats.lightlessTimer > (0.6 * PlayerStats.originalLightlessTimer))
+		{
+			PlayerStats.fear = 0;
+			PlayerStats.lightlessFear = false;
+		}
+		else if (PlayerStats.lightlessTimer > (0.3 * PlayerStats.originalLightlessTimer))
+		{
+			PlayerStats.fear = 1;
+			PlayerStats.lightlessFear = true;
+		}
+		else
+		{
+			PlayerStats.fear = 2;
+			PlayerStats.lightlessFear = true;	
+		}
+	}
+
 }

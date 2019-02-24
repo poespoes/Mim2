@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MimLightToggle : MonoBehaviour
-{ 
+{
+	public float lightTimer;
 	
 	// Use this for initialization
 	void Start ()
@@ -34,10 +35,23 @@ public class MimLightToggle : MonoBehaviour
 	public void MimLightOn()
 	{
 		PlayerStats.mimLit = true;
+		if (PlayerStats.lightlessTimer < PlayerStats.originalLightlessTimer)
+		{
+			PlayerStats.lightlessTimer += Time.deltaTime;
+		}
+		
+
 	}
 
 	public void MimLightOff()
 	{
 		PlayerStats.mimLit = false;
+		if (PlayerStats.lightlessTimer > 0)
+		{
+			PlayerStats.lightlessTimer -= Time.deltaTime;
+		}
+		
+		
 	}
+	
 }

@@ -20,13 +20,19 @@ public class PlayerStats : MonoBehaviour
     public float fear1multiplier;
     public float fear2multiplier;
 
+	public static float lightlessTimer;
+	public static bool lightlessFear;
+	public float _lightLessTimer;
+	public static float originalLightlessTimer;
+
 
 	private void Awake()
 	{
 		isInteractive = true;
 		playerTransform = this.transform;
 		player = this.transform.gameObject;
-		
+		lightlessTimer = _lightLessTimer;
+		originalLightlessTimer = _lightLessTimer;
 	}
 	// Use this for initialization
 	
@@ -40,6 +46,7 @@ public class PlayerStats : MonoBehaviour
 	void Update () {
 		
 		FearChange();
+		NoLight();
 		IncreaseFear();
 		playerTransform = this.transform;
 
@@ -49,6 +56,7 @@ public class PlayerStats : MonoBehaviour
 		}
 
 		Fear = fear;
+		_lightLessTimer = lightlessTimer;
 	}
 
 
@@ -95,7 +103,7 @@ public class PlayerStats : MonoBehaviour
 		PlayerStats.canDie = false;
 		PlayerMovement.isClimbing = false;
 		PlayerMovement.canClimb = false;
-		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 		
 		Component[] sprites;
@@ -110,6 +118,13 @@ public class PlayerStats : MonoBehaviour
 		
 		
 		Invoke("RestartScene",2);
+		
+	}
+
+	public void NoLight()
+	{
+		
+		
 		
 	}
 
