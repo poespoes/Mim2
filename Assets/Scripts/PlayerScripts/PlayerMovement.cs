@@ -225,8 +225,12 @@ public class PlayerMovement : MonoBehaviour
 				anim.SetBool("isJumping",true);
 			}
 
-			isClimbing = false;
+			if (Input.GetAxisRaw("Vertical") < 0)
+			{
+				isClimbing = false;
 
+			}
+			
 			//rb.velocity = Vector2.up * jumpForce*jump;
 		}
 		else if(jump>0)
@@ -245,6 +249,8 @@ public class PlayerMovement : MonoBehaviour
 			}
 			
 		}
+
+		
 		
 		
 	}
@@ -286,7 +292,7 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetFloat("timeFallen",timeFalling);
 			if (anim.GetBool("longFall") == true)
 			{
-				HardLanding();
+				//HardLanding(); //disabled it cause it was causing a lot of issues
 			}
 			
 			

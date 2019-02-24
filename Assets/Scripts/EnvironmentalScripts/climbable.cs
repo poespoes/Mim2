@@ -18,10 +18,18 @@ public class climbable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerMovement.canClimb == true && Input.GetAxisRaw("Vertical")!=0)
+        if (PlayerMovement.canClimb == true &&( Input.GetAxisRaw("Vertical")!=0))
         {
             PlayerMovement.isClimbing = true;
+            
         }
+
+        if ((PlayerMovement.canClimb == true))
+        {
+            
+        }
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
