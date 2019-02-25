@@ -48,10 +48,15 @@ public class NewVineTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerStats>() != null)
+        if (other.gameObject.GetComponent<PlayerStats>() != null && targetOverride == false)
         {
             target = other.transform;
             //moveTowardsPlayer.isTriggered = true;    
+        }
+        else if (other.gameObject.GetComponent<GlowingLight>() != null)
+        {
+            target = other.transform;
+            targetOverride = true;
         }
     }
     

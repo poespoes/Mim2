@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveVineBase : MonoBehaviour
 {
+    public Vector3 distance;
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -9,6 +9,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     public Transform target;
     public bool isTriggered;
     public VineSine vineSine;
+    public float timeToEnd;
 
 
     private void Awake()
@@ -19,7 +20,10 @@ public class MoveTowardsPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (timeToEnd == 0)
+        {
+            timeToEnd = 2;
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +45,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     {
         //this.transform.DOMove(target.position, 2);
 
-        this.transform.DOMoveX(target.position.x, 2);
-        this.transform.DOMoveY(target.position.y, 2);
+        this.transform.DOMoveX(target.position.x, timeToEnd);
+        this.transform.DOMoveY(target.position.y, timeToEnd);
     }
 }
