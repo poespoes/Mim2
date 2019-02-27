@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
 	public static float originalLightlessTimer;
 
 
-	private void Awake()
+    private void Awake()
 	{
 		isInteractive = true;
 		playerTransform = this.transform;
@@ -115,11 +115,12 @@ public class PlayerStats : MonoBehaviour
 			renderer.enabled = false;
 		}
 
-		
-		
-		Invoke("RestartScene",2);
-		
-	}
+
+
+        GameObject.Find("GameManager").GetComponent<GameManager>().RestartScene();
+
+
+    }
 
 	public void NoLight()
 	{
@@ -128,8 +129,5 @@ public class PlayerStats : MonoBehaviour
 		
 	}
 
-	public void RestartScene()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
+
 }
