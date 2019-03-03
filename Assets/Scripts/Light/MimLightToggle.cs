@@ -22,11 +22,11 @@ public class MimLightToggle : MonoBehaviour
 
 			if (Input.GetButton("Fire1"))
 			{
-				MimLightOn();
+				MimLightOff();
 			}
 			else
 			{
-				MimLightOff();
+				MimLightOn();
 			}
 		}
 	}
