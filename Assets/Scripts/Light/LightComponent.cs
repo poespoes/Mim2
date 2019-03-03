@@ -22,7 +22,7 @@ public class LightComponent : MonoBehaviour {
 		SpriteRenderer[] _spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
 		foreach (SpriteRenderer _sprite in _spriteRenderer )
 		{
-			_sprite.enabled = PlayerStats.mimLit;
+			//_sprite.enabled = PlayerStats.mimLit;
 		}
 	}
 }

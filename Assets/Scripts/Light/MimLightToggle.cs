@@ -9,14 +9,14 @@ public class MimLightToggle : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		PlayerStats.canToggle = true;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (PlayerStats.isInteractive == true)
+		if (PlayerStats.isInteractive == true && PlayerStats.canToggle==true)
 		{
 
 

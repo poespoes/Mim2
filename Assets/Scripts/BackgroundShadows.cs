@@ -51,4 +51,15 @@ public class BackgroundShadows : MonoBehaviour
             }
         
     }
+
+    public void CanToggle()
+    {
+        PlayerStats.canToggle = true;
+    }
+
+    public void NoToggle()
+    {
+        PlayerStats.canToggle = false;
+    }
+    
 }

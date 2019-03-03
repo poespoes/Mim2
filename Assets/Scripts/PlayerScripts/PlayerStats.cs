@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour
 	public static int fear;
 	public int Fear;
 	public static bool mimLit; //if mim is lit or not
+	public static bool canToggle; //whether or not the light is ready to toggle or not - true when animation ends
+	public bool CanToggle;
 	public static bool canDie; //if can die is true and the light is activated, the vine kills Mim
 	public static Transform playerTransform;
 	public static GameObject player;
@@ -57,6 +59,8 @@ public class PlayerStats : MonoBehaviour
 
 		Fear = fear;
 		_lightLessTimer = lightlessTimer;
+
+		CanToggle = canToggle;
 	}
 
 
