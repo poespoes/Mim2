@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
 			if (Input.GetAxisRaw("Horizontal") > 0)
 			{
-				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = false;
+				//this.transform.Find("mSprite").GetComponent<SpriteRenderer>().flipX = false;
 
 				foreach (SpriteRenderer _sprite in spritesToFlip)
 				{
