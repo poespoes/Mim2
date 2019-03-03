@@ -20,7 +20,7 @@ public class MimLightToggle : MonoBehaviour
 		{
 
 
-			if (Input.GetButton("Fire1"))
+			if (Input.GetButton("Fire1")) //the button you press to toggle light
 			{
 				MimLightOff();
 			}

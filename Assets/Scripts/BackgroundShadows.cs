@@ -9,6 +9,8 @@ public class BackgroundShadows : MonoBehaviour
     public SpriteRenderer _frame1;
     public SpriteRenderer _frame3;
     public float alpha;
+
+    public Animator anim;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class BackgroundShadows : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (PlayerStats.mimLit == true)
         {
             _frame1.DOFade(alpha, 0.25f);
@@ -29,6 +32,23 @@ public class BackgroundShadows : MonoBehaviour
             
             _frame1.DOFade(0, 0.5f);
             _frame3.DOFade(alpha, 0.25f);
-        }
+        }*/
+    }
+
+    private void LateUpdate()
+    {
+        
+            if (PlayerStats.mimLit == true)
+            {
+                anim.SetBool("FrameLightON",true);
+                anim.SetBool("FrameLightOFF",false);
+            }
+            else
+            {
+                anim.SetBool("FrameLightON",false);
+                anim.SetBool("FrameLightOFF",true);
+                
+            }
+        
     }
 }
