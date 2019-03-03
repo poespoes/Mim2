@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 	public static bool canToggle; //whether or not the light is ready to toggle or not - true when animation ends
 	public bool CanToggle;
 	public static bool canDie; //if can die is true and the light is activated, the vine kills Mim
+	public bool CanDie;
 	public static Transform playerTransform;
 	public static GameObject player;
 	public static bool isInteractive;
@@ -45,7 +46,10 @@ public class PlayerStats : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+
+		CanDie = canDie;
 		
 		FearChange();
 		NoLight();
@@ -121,7 +125,7 @@ public class PlayerStats : MonoBehaviour
 
 
 
-        GameObject.Find("GameManager").GetComponent<GameManager>().RestartScene();
+	        GameObject.Find("GameManager").GetComponent<GameManager>().RestartScene();
 
 
     }

@@ -33,7 +33,7 @@ public class NewVineTrigger : MonoBehaviour
             moveTowardsPlayer.isTriggered = false;
         }
 
-        if (target.gameObject.GetComponent<PlayerStats>() != null)
+        if (target != null && target.gameObject.GetComponent<PlayerStats>() != null)
         {
             if (PlayerStats.mimLit == true)
             {
