@@ -11,10 +11,12 @@ public class MoveTowardsPlayer : MonoBehaviour
     public VineSine vineSine;
     public float timeToEnd;
 
+    public Vector3 currentPos;
 
     private void Awake()
     {
         //target = PlayerStats.playerTransform;
+        currentPos = this.transform.position;
     }
 
     // Start is called before the first frame update
@@ -32,12 +34,14 @@ public class MoveTowardsPlayer : MonoBehaviour
         if (isTriggered == true && target!=null)
         {
             Chase();
+            currentPos = this.transform.position;
             //vineSine.enabled = false;
         }
         else
         {
             //vineSine.enabled = true;
             this.transform.position = this.transform.position;
+            RandomMotion();
             
         }
     }
@@ -52,6 +56,15 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     public void RandomMotion()
     {
+        //Vector3 newPos = new Vector3(this.transform.position.x,Mathf.PingPong(Time.deltaTime * 2,0.01f),this.transform.position.z);
+        //this.transform.DOMove(newPos, 1);
+
+        transform.position = currentPos+ new Vector3(0, Mathf.Lerp(-3, 3, Mathf.PingPong(Time.time, 1)), 0);
+    }
+
+    public IEnumerator WaveMotion()
+    {
+        yield return  new WaitForSeconds(0.2f);
         
     }
 }
