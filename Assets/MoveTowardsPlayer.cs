@@ -32,12 +32,13 @@ public class MoveTowardsPlayer : MonoBehaviour
         if (isTriggered == true && target!=null)
         {
             Chase();
-            vineSine.enabled = false;
+            //vineSine.enabled = false;
         }
         else
         {
-            vineSine.enabled = true;
+            //vineSine.enabled = true;
             this.transform.position = this.transform.position;
+            
         }
     }
 
@@ -47,5 +48,10 @@ public class MoveTowardsPlayer : MonoBehaviour
 
         this.transform.DOMoveX(target.position.x, timeToEnd);
         this.transform.DOMoveY(target.position.y, timeToEnd);
+    }
+
+    public void RandomMotion()
+    {
+        
     }
 }
