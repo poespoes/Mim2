@@ -34,7 +34,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         if (isTriggered == true && target!=null)
         {
             Chase();
-            currentPos = this.transform.position;
+            //currentPos = this.transform.position;
             //vineSine.enabled = false;
         }
         else
@@ -59,7 +59,10 @@ public class MoveTowardsPlayer : MonoBehaviour
         //Vector3 newPos = new Vector3(this.transform.position.x,Mathf.PingPong(Time.deltaTime * 2,0.01f),this.transform.position.z);
         //this.transform.DOMove(newPos, 1);
 
-        transform.position = currentPos+ new Vector3(0, Mathf.Lerp(-3, 3, Mathf.PingPong(Time.time, 1)), 0);
+        //transform.position = currentPos+ new Vector3(0, Mathf.Lerp(-3, 3, Mathf.PingPong(Time.time, 1)), 0);
+        
+        this.transform.DOMoveX(currentPos.x, timeToEnd);
+        this.transform.DOMoveY(currentPos.y, timeToEnd);
     }
 
     public IEnumerator WaveMotion()
