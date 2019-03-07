@@ -688,6 +688,7 @@ Transform:
   - {fileID: 2242912897966944498}
   - {fileID: 7814414261705339313}
   - {fileID: 3208716586805814074}
+  - {fileID: 5261954694108074579}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -753,7 +754,7 @@ MonoBehaviour:
   groundDetectionLayer:
     serializedVersion: 2
     m_Bits: 256
-  groundRadius: 0.2
+  groundRadius: 0.05
   groundPoint: {fileID: 4860558008549600}
   anim: {fileID: 0}
   spritesToFlip:
@@ -764,7 +765,7 @@ MonoBehaviour:
   - {fileID: 3403803813111555533}
   _isClimbing: 0
   gravityScale: 0
-  longFallThreshold: 0.4
+  longFallThreshold: 1
   timeFalling: 0
 --- !u!114 &114807038206879226
 MonoBehaviour:
@@ -1412,6 +1413,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35142ae05a975644becf746fb8f7068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5939869400739783236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5261954694108074579}
+  - component: {fileID: 3427574268792186501}
+  m_Layer: 0
+  m_Name: FMOD Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5261954694108074579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939869400739783236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4964947269120520}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3427574268792186501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939869400739783236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &6832991390464984451
 GameObject:
   m_ObjectHideFlags: 0

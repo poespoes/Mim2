@@ -5,7 +5,7 @@
             <value>VineMovement</value>
         </property>
         <property name="outputFormat">
-            <value>1</value>
+            <value>2</value>
         </property>
         <relationship name="folder">
             <destination>{edfbc8e0-53bb-43ca-8c5f-48bb47db2412}</destination>
@@ -30,6 +30,9 @@
         </relationship>
         <relationship name="timeline">
             <destination>{80879d45-90da-4d4a-b2c4-a50c0408fcc0}</destination>
+        </relationship>
+        <relationship name="parameters">
+            <destination>{e0babbbf-7c5f-44a8-9518-a9094fcc3a63}</destination>
         </relationship>
         <relationship name="banks">
             <destination>{2019b378-9052-4b3a-badf-26a8b953752a}</destination>
@@ -87,7 +90,15 @@
             <destination>{7333166c-9e67-4411-b167-77acde570c7b}</destination>
         </relationship>
     </object>
+    <object class="ParameterProxy" id="{e0babbbf-7c5f-44a8-9518-a9094fcc3a63}">
+        <relationship name="preset">
+            <destination>{54380e21-7db0-4eea-944b-f3e09f136636}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{8162e987-fe2a-45e4-ba38-46043933e22f}">
+        <property name="volume">
+            <value>5.5</value>
+        </property>
         <property name="pitch">
             <value>-4.5</value>
         </property>
@@ -126,9 +137,6 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{56a5f004-e4c4-43f3-a9a4-05d5ecd6c058}">
-        <property name="volume">
-            <value>-2.5</value>
-        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -194,6 +202,7 @@
         <relationship name="effects">
             <destination>{ec588fa3-2599-4ea7-9623-d8b4fbaa7c77}</destination>
             <destination>{07d5dd62-2669-4b6b-af39-bfc8213b8f74}</destination>
+            <destination>{f88d861b-cb9f-40f2-9041-f63dc2ccac17}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{7fbb84e8-5e87-418f-abb8-5f674d240459}"/>
@@ -265,4 +274,5 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{07d5dd62-2669-4b6b-af39-bfc8213b8f74}"/>
+    <object class="SpatialiserEffect" id="{f88d861b-cb9f-40f2-9041-f63dc2ccac17}"/>
 </objects>
