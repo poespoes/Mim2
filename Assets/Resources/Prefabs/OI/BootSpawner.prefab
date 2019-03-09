@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6017289264993010578}
   - component: {fileID: 6017289264993010579}
   m_Layer: 0
-  m_Name: SpawnerSprite
+  m_Name: BootSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6017289266093281334}
   - component: {fileID: 6017289266093281335}
+  - component: {fileID: 6829192352280429094}
   m_Layer: 0
   m_Name: OiSpawn
   m_TagString: Untagged
@@ -158,6 +159,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6829192352280429094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017289266093281333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212c135e2dc27dd47ba8548a41bd6c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: f6da7ca85f51dc447aee6e75cd3ff07a, type: 3}
+  - {fileID: 21300000, guid: 32d083188f21fea46ae4ff2f0fb015dd, type: 3}
+  - {fileID: 21300000, guid: bb8af1799493d59428d09094bba1d22c, type: 3}
+  - {fileID: 21300000, guid: a53970b5a5bf1654488a7c1cdfbbc1c3, type: 3}
+  - {fileID: 21300000, guid: 64af75b307d346e4dbb3a3cdecd7456e, type: 3}
+  - {fileID: 21300000, guid: 4fd9be60a82f4d3488d8569446d88881, type: 3}
+  - {fileID: 21300000, guid: 64ba0f3e814d7eb48a81cf144190546b, type: 3}
+  - {fileID: 21300000, guid: b4a2f91bb372aa543a2b7f340898ee05, type: 3}
+  - {fileID: 21300000, guid: c910b82ee3c250141b6394f668b48aea, type: 3}
+  - {fileID: 21300000, guid: 1bae1ba0b2f69df4c81d281074071ab7, type: 3}
+  - {fileID: 21300000, guid: 87420b55434b05d40a67bec22427874b, type: 3}
+  - {fileID: 21300000, guid: 077d07280f587c944b7030367842680e, type: 3}
+  - {fileID: 21300000, guid: 98affe8cf43eb7748bfde3738470b208, type: 3}
+  - {fileID: 21300000, guid: 8ea7cf623568e694d9b7c716685039ac, type: 3}
+  - {fileID: 21300000, guid: 63d2252f10b0f5e408f2755e699e3890, type: 3}
+  frameDuration: 1
+  frameReverseDuration: 1
+  isLightened: 0
 --- !u!1 &6017289266397484985
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,9 +200,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6017289266397484986}
   - component: {fileID: 6017289266397484988}
-  - component: {fileID: 6017289266397484987}
   m_Layer: 0
-  m_Name: BottleSpawner 1
+  m_Name: BootSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,22 +244,3 @@ MonoBehaviour:
   _mySon: {fileID: 0}
   canSpawnOI: 0
   _typeOfOI: 0
---- !u!95 &6017289266397484987
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6017289266397484985}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70041864ce9383d49a136ae6da1f0fdd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

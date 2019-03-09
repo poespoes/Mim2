@@ -18,7 +18,11 @@ public class Poe_OISpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
+
+        isLightened = PlayerStats.mimLit;
+        
         timer += Time.deltaTime;
 
         if (isLightened == false) {
