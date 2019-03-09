@@ -12,6 +12,10 @@ public class GlowingLight : MonoBehaviour
     public bool forceLight;
     public float lightDetectionRadius;
     
+    [Range(1.0f,10.0f)]
+    public float lightUpDelay;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,8 @@ public class GlowingLight : MonoBehaviour
         {
             lightDetectionRadius = 3;
         }
+
+       
     }
 
     // Update is called once per frame
@@ -48,7 +54,8 @@ public class GlowingLight : MonoBehaviour
             {
                 if (coll[i].GetComponent<GlowingLight>().objectLit == true)
                 {
-                    forceLight = true;
+                    //forceLight = true;
+                    Invoke("LightUp",lightUpDelay);
                 }
             }
         }
