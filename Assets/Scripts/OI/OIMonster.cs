@@ -50,7 +50,7 @@ public class OIMonster : MonoBehaviour
 			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
 			float step = speed * Time.deltaTime;
 			transform.position = Vector2.MoveTowards(transform.position, PlayerStats.playerTransform.position, step);
-			speed += rampUp*Time.deltaTime;
+			//speed += rampUp*Time.deltaTime; //increase speed over time
 
 
 
