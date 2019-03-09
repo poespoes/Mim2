@@ -12,6 +12,8 @@ public class Poe_OISpawner : MonoBehaviour
     float timer = 0;
     int currentIndex = 0;
 
+    public OISpawner _oiSpawner;
+
     // Use this for initialization
     void Start() {
 
@@ -22,24 +24,45 @@ public class Poe_OISpawner : MonoBehaviour
     {
 
         isLightened = PlayerStats.mimLit;
-        
+
         timer += Time.deltaTime;
 
-        if (isLightened == false) {
-            if (timer >= frameDuration) {
-                timer -= frameDuration;
-                if (currentIndex + 1 < spriteList.Count) {
-                    currentIndex++;
+        if (_oiSpawner._mySon == null)
+        {
+
+
+
+            if (isLightened == false)
+            {
+                if (timer >= frameDuration)
+                {
+                    timer -= frameDuration;
+                    if (currentIndex + 1 < spriteList.Count)
+                    {
+                        currentIndex++;
+                    }
+
+                    GetComponent<SpriteRenderer>().sprite = spriteList[currentIndex];
+
+                    if (currentIndex + 1 == spriteList.Count)
+                    {
+                        Debug.Log("New Spawn OI called");
+                        _oiSpawner.newSpawnOI();
+                    }
                 }
-                GetComponent<SpriteRenderer>().sprite = spriteList[currentIndex];
             }
-        } else {
-            if (timer >= frameReverseDuration) {
-                timer -= frameReverseDuration;
-                if (currentIndex - 1 >= 0) {
-                    currentIndex--;
+            else
+            {
+                if (timer >= frameReverseDuration)
+                {
+                    timer -= frameReverseDuration;
+                    if (currentIndex - 1 >= 0)
+                    {
+                        currentIndex--;
+                    }
+
+                    GetComponent<SpriteRenderer>().sprite = spriteList[currentIndex];
                 }
-                GetComponent<SpriteRenderer>().sprite = spriteList[currentIndex];
             }
         }
     }

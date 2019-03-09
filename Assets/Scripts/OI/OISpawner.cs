@@ -68,14 +68,14 @@ public class OISpawner : MonoBehaviour
 			else
 			{
 				//SpawnOI();
-				this.GetComponent<Animator>().SetBool("isSpawning",true);
+				//this.GetComponent<Animator>().SetBool("isSpawning",true);
 				canSpawnOI = true;
 				timer = 0;
 			}
 		}
 		else
 		{
-			this.GetComponent<Animator>().SetBool("isSpawning",false);
+			//this.GetComponent<Animator>().SetBool("isSpawning",false);
 			
 			if (timer < spawnTime)
 			{
@@ -90,7 +90,7 @@ public class OISpawner : MonoBehaviour
 		}
 	}
 
-	void SpawnOI()
+	public void SpawnOI()
 	{
 		if (canSpawnOI == true && _mySon == null && PlayerStats.mimLit == false) 
 		{
@@ -103,7 +103,8 @@ public class OISpawner : MonoBehaviour
 			_mySon.transform.SetParent(this.transform, false);
 			_mySon.transform.position = this.transform.position;
 
-			this.GetComponent<Animator>().SetBool("isSpawning", false);
+			//
+			//this.GetComponent<Animator>().SetBool("isSpawning", false);
 		}
 
 	}
@@ -115,6 +116,25 @@ public class OISpawner : MonoBehaviour
 		{
 			Destroy(_mySon);
 			Debug.Log("Despawn succesful");
+		}
+	}
+
+	public void newSpawnOI()
+	{
+		Debug.Log("New Spawn OI successfully called");
+		
+		if ( _mySon == null && PlayerStats.mimLit == false) 
+		{
+
+			string _myPath = "Prefabs/OI/" + _typeOfOI.ToString();
+
+			Debug.Log("Spawned from " + _myPath);
+
+			_mySon = GameObject.Instantiate(Resources.Load(_myPath) as GameObject);
+			_mySon.transform.SetParent(this.transform, false);
+			_mySon.transform.position = this.transform.position;
+
+			//this.GetComponent<Animator>().SetBool("isSpawning", false);
 		}
 	}
 }
