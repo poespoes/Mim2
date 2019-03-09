@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public float horizontal;
 	public float moveSpeed;
+	public float climbSpeed;
 	public static float originalMoveSpeed; //a static float that holds the original speed set for the player game object
 	
 	
@@ -184,8 +185,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 				rb.velocity =
-					new Vector2(Input.GetAxis("Horizontal") * moveSpeed,
-						Mathf.Lerp(0, Input.GetAxis("Vertical") * moveSpeed, 0.8f));
+					new Vector2(Input.GetAxis("Horizontal") * climbSpeed,
+						Mathf.Lerp(0, Input.GetAxis("Vertical") * climbSpeed, 0.8f));
 
 				//rb.velocity = new Vector2(0,10f);
 			}
