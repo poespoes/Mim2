@@ -8,7 +8,7 @@ public class NewVineTrigger : MonoBehaviour
     public Transform target;
     public bool targetOverride;
     public bool foundLight;
-    
+    public Transform inactiveTarget;
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,11 @@ public class NewVineTrigger : MonoBehaviour
                 foundLight = false;
             }
         }
+
+        if (inactiveTarget.GetComponent<GlowingLight>().objectLit)
+        {
+            ChaseOtherLight(inactiveTarget.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -55,12 +60,30 @@ public class NewVineTrigger : MonoBehaviour
         }
         else if (other.gameObject.GetComponent<GlowingLight>() != null)
         {
-            target = other.transform;
-            foundLight = true;
-            targetOverride = true;
+            if (other.gameObject.GetComponent<GlowingLight>().objectLit == true)
+            {
+                /*target = other.transform;
+                foundLight = true;
+                targetOverride = true;*/
+                
+                ChaseOtherLight(other.gameObject);
+            }
+            else
+            {
+                inactiveTarget = other.transform;
+            }
+            
         }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<GlowingLight>() != null)
+        {
+            inactiveTarget = other.transform;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<PlayerStats>() != null && targetOverride == false)
@@ -68,6 +91,13 @@ public class NewVineTrigger : MonoBehaviour
             target = other.transform;
             //moveTowardsPlayer.isTriggered = false;
         }
+    }
+
+    public void ChaseOtherLight(GameObject other)
+    {
+        target = other.transform;
+        foundLight = true;
+        targetOverride = true;
     }
 
     public void CheckWithinTrigger()
