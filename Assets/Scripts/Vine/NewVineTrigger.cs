@@ -56,6 +56,7 @@ public class NewVineTrigger : MonoBehaviour
         else if (other.gameObject.GetComponent<GlowingLight>() != null)
         {
             target = other.transform;
+            foundLight = true;
             targetOverride = true;
         }
     }
@@ -67,5 +68,10 @@ public class NewVineTrigger : MonoBehaviour
             target = other.transform;
             //moveTowardsPlayer.isTriggered = false;
         }
+    }
+
+    public void CheckWithinTrigger()
+    {
+        
     }
 }

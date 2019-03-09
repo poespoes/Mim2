@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581503254177287547}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.54, y: 1.98, z: -0.32343036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43,7 +43,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7581503254177287547}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 42f5e5aed158f1d4b8ee01dddba4d4d4, type: 2}
+  m_Material: {fileID: 6200000, guid: 066b04856f685dc47ac0bf112c9b2801, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -110,8 +110,8 @@ GameObject:
   - component: {fileID: 7581503255020645800}
   - component: {fileID: 7581503255020645804}
   - component: {fileID: 7581503255020645803}
-  - component: {fileID: 7581503255020645805}
   - component: {fileID: 7581503255020645806}
+  - component: {fileID: 447322817}
   m_Layer: 0
   m_Name: LightObject_1
   m_TagString: Untagged
@@ -243,8 +243,20 @@ MonoBehaviour:
   objectLit: 0
   vineChase: {fileID: 0}
   hasDied: 0
-  forceLight: 0
---- !u!50 &7581503255020645805
+  forceLight: 1
+--- !u!114 &7581503255020645806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581503255020645847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d027784b4ca59b4bb54a449b650f8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &447322817
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -265,18 +277,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7581503255020645806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7581503255020645847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d027784b4ca59b4bb54a449b650f8a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7581503255769029229
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581503255769029229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.23, z: 0}
+  m_LocalPosition: {x: 0, y: 0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7581503255020645802}
