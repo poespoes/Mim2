@@ -114,13 +114,16 @@ public class PlayerStats : MonoBehaviour
 		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 		this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 		
+		playerAnim.SetBool("isDead",true);
+		
+		
 		Component[] sprites;
 
 		sprites = player.GetComponentsInChildren<SpriteRenderer>();
 
 		foreach (SpriteRenderer renderer in sprites)
 		{
-			renderer.enabled = false;
+			//renderer.enabled = false;
 		}
 
 
