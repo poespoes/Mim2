@@ -35,17 +35,18 @@ public class NewVineTrigger : MonoBehaviour
 
         if (target != null && target.gameObject.GetComponent<PlayerStats>() != null)
         {
-            if (PlayerStats.mimLit == true)
+            if (PlayerStats.mimLit == true && target!=null)
             {
                 foundLight = true;
             }
             else
             {
+                Debug.Log("Withdraw Vine");
                 foundLight = false;
             }
         }
 
-        if (inactiveTarget.GetComponent<GlowingLight>().objectLit)
+        if (inactiveTarget.GetComponent<GlowingLight>()!=null && inactiveTarget.GetComponent<GlowingLight>().objectLit)
         {
             ChaseOtherLight(inactiveTarget.gameObject);
         }
@@ -53,26 +54,31 @@ public class NewVineTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerStats>() != null && targetOverride == false)
+        if (targetOverride == false)
         {
-            target = other.transform;
-            //moveTowardsPlayer.isTriggered = true;    
-        }
-        else if (other.gameObject.GetComponent<GlowingLight>() != null)
-        {
-            if (other.gameObject.GetComponent<GlowingLight>().objectLit == true)
+
+
+            if (other.gameObject.GetComponent<PlayerStats>() != null && targetOverride == false)
             {
-                /*target = other.transform;
-                foundLight = true;
-                targetOverride = true;*/
-                
-                ChaseOtherLight(other.gameObject);
+                target = other.transform;
+                //moveTowardsPlayer.isTriggered = true;    
             }
-            else
+            else if (other.gameObject.GetComponent<GlowingLight>() != null)
             {
-                inactiveTarget = other.transform;
+                if (other.gameObject.GetComponent<GlowingLight>().objectLit == true)
+                {
+                    /*target = other.transform;
+                    foundLight = true;
+                    targetOverride = true;*/
+
+                    ChaseOtherLight(other.gameObject);
+                }
+                else
+                {
+                    inactiveTarget = other.transform;
+                }
+
             }
-            
         }
     }
 
@@ -82,17 +88,21 @@ public class NewVineTrigger : MonoBehaviour
         {
             inactiveTarget = other.transform;
         }
+       
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<PlayerStats>() != null && targetOverride == false)
         {
-            target = other.transform;
+            //target = other.transform;
+            foundLight = false;
+            target = null;
             //moveTowardsPlayer.isTriggered = false;
         }
     }
 
+    
     public void ChaseOtherLight(GameObject other)
     {
         target = other.transform;
