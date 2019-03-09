@@ -16,6 +16,7 @@ public class OIMonster : MonoBehaviour
 	[Range(1,10)]
 	public float rampUp;
 
+	public SpriteRenderer _sprite;
 	
 
 	// Use this for initialization
@@ -43,6 +44,15 @@ public class OIMonster : MonoBehaviour
 
 	void Chase()
 	{
+
+		if (PlayerStats.player.transform.position.x > this.transform.position.x)
+		{
+			_sprite.flipX = false;
+		}
+		else
+		{
+			_sprite.flipX = true;
+		}
 		
 		currentDistance = Vector2.Distance(PlayerStats.playerTransform.position, this.transform.position);
 		if (PlayerStats.mimLit == false)
