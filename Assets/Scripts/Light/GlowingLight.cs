@@ -10,11 +10,15 @@ public class GlowingLight : MonoBehaviour
     public VineChase vineChase;
     public bool hasDied;
     public bool forceLight;
+    public float lightDetectionRadius;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (lightDetectionRadius == 0)
+        {
+            lightDetectionRadius = 3;
+        }
     }
 
     // Update is called once per frame
@@ -35,6 +39,21 @@ public class GlowingLight : MonoBehaviour
             LightUp();
 
         }
+
+        Collider2D[] coll = Physics2D.OverlapCircleAll(this.transform.position, lightDetectionRadius);
+
+        for (int i = 0; i < coll.Length; i++)
+        {
+            if (coll[i].GetComponent<GlowingLight>() != null)
+            {
+                if (coll[i].GetComponent<GlowingLight>().objectLit == true)
+                {
+                    forceLight = true;
+                }
+            }
+        }
+            
+       
         
     }
 
