@@ -292,7 +292,7 @@ public class PlayerMovement : MonoBehaviour
 		if (grounded == false)
 		{
 			timeFalling += Time.deltaTime;
-			if (rb.velocity.y !=0 && jump == 0 && timeFalling>0.8f) //if you haven't pressed the jump button or if you are not on ground
+			if (rb.velocity.y !=0 && jump == 0 && timeFalling>0.11f) //if you haven't pressed the jump button or if you are not on ground
 			{
 				anim.SetBool("isFalling", true);
 				
