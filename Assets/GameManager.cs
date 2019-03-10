@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,9 +10,13 @@ public class GameManager : MonoBehaviour
     public bool startFromHere;
     public int Here;
 
+    public static int HighestCameraPriority;
+
     // Start is called before the first frame update
     void Start()
     {
+        HighestCameraPriority = 11;
+        
         if (startFromHere) {
             PlayerPrefs.SetInt("SpawnPointIndex", Here);
         }

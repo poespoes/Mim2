@@ -9,11 +9,12 @@ public class EnterSafeZone : MonoBehaviour
     public CinemachineVirtualCamera cm2;
     public int priority;
     public bool dynamic;
+    public CinemachineVirtualCamera mainCam;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        mainCam = GameObject.Find("MainVirtualCamera").GetComponent<CinemachineVirtualCamera>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,8 @@ public class EnterSafeZone : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            GameManager.HighestCameraPriority += 1;
+            priority = GameManager.HighestCameraPriority;
             cm2.Priority = priority;
 
             if (dynamic == true)
@@ -33,6 +36,18 @@ public class EnterSafeZone : MonoBehaviour
                 cm2.m_Follow = other.transform;
             }
             
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            GameManager.HighestCameraPriority += 1;
+            priority = GameManager.HighestCameraPriority;
+            mainCam.Priority = priority;
+
+
         }
     }
 }
