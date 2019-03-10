@@ -25,10 +25,17 @@ public class OIMonster : MonoBehaviour
 		{
 			rampUp = 2;
 		}
+
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if (_sprite == null)
+		{
+			_sprite = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
+		}
 		
 		if (currentDistance < maxDistance)
 		{
