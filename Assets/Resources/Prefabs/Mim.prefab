@@ -95,11 +95,11 @@ MonoBehaviour:
   _spriteRend: {fileID: 0}
   colorA:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 0
   colorB:
     serializedVersion: 2
-    rgba: 63229
-  colorChangeDuration: 1
+    rgba: 0
+  colorChangeDuration: 0
 --- !u!1 &450880666
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,11 +367,11 @@ MonoBehaviour:
   _spriteRend: {fileID: 0}
   colorA:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 0
   colorB:
     serializedVersion: 2
-    rgba: 63229
-  colorChangeDuration: 1
+    rgba: 0
+  colorChangeDuration: 0
 --- !u!1 &641056682
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,11 +559,11 @@ MonoBehaviour:
   _spriteRend: {fileID: 0}
   colorA:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 0
   colorB:
     serializedVersion: 2
-    rgba: 4294770694
-  colorChangeDuration: 1
+    rgba: 0
+  colorChangeDuration: 0
 --- !u!1 &1939214559
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 70000110958014950}
   - component: {fileID: 114197013525431582}
   - component: {fileID: 959300914667807828}
+  - component: {fileID: 1820690913433378545}
   m_Layer: 0
   m_Name: Mim
   m_TagString: Player
@@ -807,7 +808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   moveSpeed: 10
-  climbSpeed: 7
+  climbSpeed: 0
   jump: 0
   jumpForce: 12.5
   grounded: 0
@@ -846,8 +847,8 @@ MonoBehaviour:
   Fear: 0
   CanToggle: 0
   CanDie: 0
-  fear1multiplier: 0
-  fear2multiplier: 0
+  fear1multiplier: 0.7
+  fear2multiplier: 0.35
   _lightLessTimer: 10
 --- !u!70 &70000110958014950
 CapsuleCollider2D:
@@ -893,6 +894,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightTimer: 10
+--- !u!114 &1820690913433378545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960821232076618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9a4eead7981914ebfdd5dc8e9164d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OILayer:
+    serializedVersion: 2
+    m_Bits: 512
+  scared: 0
+  veryScared: 0
+  scaredRadius: 10
+  veryscaredRadius: 6
+  unAfraid: 0
+  notAfraidOfOI: 0
 --- !u!1 &143482537156304936
 GameObject:
   m_ObjectHideFlags: 0
