@@ -11,11 +11,19 @@ public class GameManager : MonoBehaviour
     public int Here;
 
     public static int HighestCameraPriority;
+    public static CinemachineVirtualCamera currentCam;
+    public static CinemachineVirtualCamera prevCam;
+   
+
+    private void Awake()
+    {
+        HighestCameraPriority = 11;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        HighestCameraPriority = 11;
+        
         
         if (startFromHere) {
             PlayerPrefs.SetInt("SpawnPointIndex", Here);
