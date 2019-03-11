@@ -54,7 +54,9 @@ public class PlayerStats : MonoBehaviour
 		FearChange();
 		NoLight();
 		IncreaseFear();
-		playerTransform = this.transform;
+        //BurstSpeed();
+
+        playerTransform = this.transform;
 
 		if (canDie == true && mimLit == true)
 		{
@@ -139,6 +141,10 @@ public class PlayerStats : MonoBehaviour
 		
 		
 	}
-
+    public void BurstSpeed() {
+        if (!mimLit) {
+            moveSpeed += 2;
+        }
+    }
 
 }
