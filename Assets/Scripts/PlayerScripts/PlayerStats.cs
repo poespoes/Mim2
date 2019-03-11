@@ -67,6 +67,10 @@ public class PlayerStats : MonoBehaviour
 		_lightLessTimer = lightlessTimer;
 
 		CanToggle = canToggle;
+
+        if(lightlessTimer <= 0) {
+            Die();
+        }
 	}
 
 
