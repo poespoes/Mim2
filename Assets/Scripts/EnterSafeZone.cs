@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-using Cinemachine.Editor;
+//using Cinemachine.Editor;
 
 public class EnterSafeZone : MonoBehaviour
 {
