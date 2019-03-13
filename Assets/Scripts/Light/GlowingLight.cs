@@ -12,7 +12,7 @@ public class GlowingLight : MonoBehaviour
     public bool forceLight;
     public float lightDetectionRadius;
     
-    [Range(1.0f,10.0f)]
+    [Range(0.1f,10.0f)]
     public float lightUpDelay;
     
     

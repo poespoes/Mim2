@@ -9,6 +9,7 @@ public class Poe_OISpawner : MonoBehaviour
     public float frameDuration;
     public float frameReverseDuration;
     public bool isLightened = false;
+    public bool MimWithinArea = false;
     float timer = 0;
     int currentIndex = 0;
 
@@ -32,7 +33,7 @@ public class Poe_OISpawner : MonoBehaviour
 
 
 
-            if (isLightened == false)
+            if (isLightened == false && MimWithinArea)
             {
                 if (timer >= frameDuration)
                 {
@@ -67,13 +68,19 @@ public class Poe_OISpawner : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other) {
-        isLightened = true;
-        timer = 0;
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            MimWithinArea = true;
+            Debug.Log("Mim is within the area to spawn OI");
+        }
+            
+        //timer = 0;
     }
 
-    void OnTriggerExit(Collider other) {
-        isLightened = false;
-        timer = 0;
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            MimWithinArea = false;
+            //timer = 0;
+        }
     }
 }

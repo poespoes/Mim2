@@ -90,6 +90,8 @@ GameObject:
   - component: {fileID: 6017289266093281334}
   - component: {fileID: 6017289266093281335}
   - component: {fileID: 6829192352280429094}
+  - component: {fileID: 1911930915}
+  - component: {fileID: 1911930914}
   m_Layer: 0
   m_Name: OiSpawn
   m_TagString: Untagged
@@ -172,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList:
+  - {fileID: 0}
   - {fileID: 21300000, guid: f6da7ca85f51dc447aee6e75cd3ff07a, type: 3}
   - {fileID: 21300000, guid: 32d083188f21fea46ae4ff2f0fb015dd, type: 3}
   - {fileID: 21300000, guid: bb8af1799493d59428d09094bba1d22c, type: 3}
@@ -191,7 +194,55 @@ MonoBehaviour:
   frameDuration: 0.1
   frameReverseDuration: 0.1
   isLightened: 0
+  MimWithinArea: 0
   _oiSpawner: {fileID: 6017289266397484988}
+--- !u!50 &1911930915
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017289266093281333}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1911930914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017289266093281333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -19.053513, y: -11.446524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 60.51523, y: 24.908344}
+  m_EdgeRadius: 0
 --- !u!1 &6017289266397484985
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6017289266397484986}
   - component: {fileID: 6017289266397484988}
+  - component: {fileID: 584317265}
   m_Layer: 0
   m_Name: BootSpawner
   m_TagString: Untagged
@@ -216,7 +268,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6017289266397484985}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.5, y: 5.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -246,3 +298,14 @@ MonoBehaviour:
   _mySon: {fileID: 0}
   canSpawnOI: 0
   _typeOfOI: 0
+--- !u!210 &584317265
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017289266397484985}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 100

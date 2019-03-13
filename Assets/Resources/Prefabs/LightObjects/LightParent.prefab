@@ -186,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 7581503254177287547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.54, y: 1.98, z: -0.32343036}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 7581503255020645802}
   m_Father: {fileID: 0}
@@ -199,7 +199,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581503254177287547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 066b04856f685dc47ac0bf112c9b2801, type: 2}
   m_IsTrigger: 0
@@ -233,7 +233,7 @@ Rigidbody2D:
   m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 7581503255020645804}
   - component: {fileID: 7581503255020645803}
   - component: {fileID: 7581503255020645806}
-  - component: {fileID: 1196988829}
+  - component: {fileID: 850532426}
   m_Layer: 0
   m_Name: LightObject_1
   m_TagString: Untagged
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581503255020645847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7581503255769029230}
@@ -374,7 +374,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20114326, y: 0.8179145}
+  m_Offset: {x: -0.20114326, y: -0.61803436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -385,7 +385,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.6630974, y: 6.800658}
+  m_Size: {x: 7.6630974, y: 5.3011627}
   m_EdgeRadius: 0
 --- !u!114 &7581503255020645803
 MonoBehaviour:
@@ -404,8 +404,8 @@ MonoBehaviour:
   vineChase: {fileID: 0}
   hasDied: 0
   forceLight: 0
-  lightDetectionRadius: 4
-  lightUpDelay: 1
+  lightDetectionRadius: 2
+  lightUpDelay: 0.1
 --- !u!114 &7581503255020645806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d027784b4ca59b4bb54a449b650f8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1196988829
+--- !u!50 &850532426
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

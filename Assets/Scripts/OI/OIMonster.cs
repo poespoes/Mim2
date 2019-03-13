@@ -51,8 +51,9 @@ public class OIMonster : MonoBehaviour
 
 	void Chase()
 	{
+        _sprite.color = new Color(255, 255, 255, 1);      //OI appears
 
-		if (PlayerStats.player.transform.position.x > this.transform.position.x)
+        if (PlayerStats.player.transform.position.x > this.transform.position.x)
 		{
 			_sprite.flipX = false;
 		}
@@ -64,8 +65,9 @@ public class OIMonster : MonoBehaviour
 		currentDistance = Vector2.Distance(PlayerStats.playerTransform.position, this.transform.position);
 		if (PlayerStats.mimLit == false)
 		{
-			//chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
-			float step = speed * Time.deltaTime;
+            //chaseSequence.Append(this.transform.DOMoveX(PlayerStats.playerTransform.position.x, chaseTime, false));
+            
+            float step = speed * Time.deltaTime;
 			transform.position = Vector2.MoveTowards(transform.position, PlayerStats.playerTransform.position, step);
 			//speed += rampUp*Time.deltaTime; //increase speed over time
 
@@ -75,10 +77,10 @@ public class OIMonster : MonoBehaviour
 		else
 		{
 			this.transform.position = this.transform.position;
-			
+			_sprite.color = new Color(255, 255, 255, 0);      //OI fades away when its not chasing mim
 
-			//chaseSequence.Kill();
-		}
+            //chaseSequence.Kill();
+        }
 		
 	}
 
