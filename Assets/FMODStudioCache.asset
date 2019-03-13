@@ -19,24 +19,19 @@ MonoBehaviour:
   - {fileID: 114742063856956606}
   - {fileID: 114739146011426608}
   - {fileID: 114637301114636674}
-  - {fileID: 114906055406192880}
   - {fileID: 114802564971938602}
   - {fileID: 114104223434762018}
   - {fileID: 114573714434073434}
-  - {fileID: 114994331682327588}
-  - {fileID: 114386856082852514}
   - {fileID: 114344155781400476}
   - {fileID: 114344806257320154}
   - {fileID: 114053777986836386}
   - {fileID: 114591924420175392}
-  - {fileID: 114524082337222446}
   - {fileID: 114373300726441648}
   - {fileID: 114360383609215450}
   - {fileID: 114284484590395096}
   - {fileID: 114685954040272472}
   - {fileID: 114883463219615530}
   - {fileID: 114323187714186976}
-  - {fileID: 114283060843468026}
   - {fileID: 114975516853826604}
   - {fileID: 114070201856964452}
   - {fileID: 114840546051208132}
@@ -46,22 +41,26 @@ MonoBehaviour:
   - {fileID: 114787041869552554}
   - {fileID: 114983666852993696}
   - {fileID: 114590603734472600}
-  - {fileID: 114411098316759960}
   - {fileID: 114201683798707516}
-  - {fileID: 114803558098479150}
   - {fileID: 114359029891517960}
   - {fileID: 114031018936960744}
   - {fileID: 114653498425077180}
   - {fileID: 114420829287239350}
   - {fileID: 114218126100810718}
   - {fileID: 114355235365133220}
+  - {fileID: 114344335544488282}
+  - {fileID: 114801003502883790}
+  - {fileID: 114645464359131314}
+  - {fileID: 114189639318545994}
+  - {fileID: 114181990698051296}
+  - {fileID: 114874874353139942}
   MasterBanks:
   - {fileID: 114462869511901294}
   - {fileID: 114533163187838458}
   - {fileID: 114283842989753634}
   StringsBanks:
   - {fileID: 114620304632462728}
-  stringsBankWriteTime: 636878451354409745
+  stringsBankWriteTime: 636880850473152445
   cacheVersion: 3
 --- !u!114 &114007041888729946
 MonoBehaviour:
@@ -76,6 +75,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114013636440137972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114024440616209006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
   Min: 0
   Max: 1
   Default: 0
@@ -125,6 +156,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 750
+--- !u!114 &114061785052143376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114069532864526254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +211,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3950
+--- !u!114 &114073195515650210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114081324738013306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +263,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114928559289810060}
+  - {fileID: 114532768353946706}
   MinDistance: 0
   MaxDistance: 0
   Length: 11154
@@ -255,6 +318,52 @@ MonoBehaviour:
   - Name: Desktop
     Value: 15080864
   Exists: 1
+--- !u!114 &114181990698051296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/BGMusic
+  guid: ce9bfbd503e3404691cc778896ebe7dd
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 197381
+--- !u!114 &114189639318545994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/BGtwo
+  guid: 414dfd1fd1e099498127c2f8004f0a9a
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 197381
 --- !u!114 &114201683798707516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +423,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114258125529162786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
   Min: 0
   Max: 1
   Default: 0
@@ -415,6 +540,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114317936197521912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114323187714186976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Mim/Locomotion/FootstepsVeryScared
-  guid: 30c138e905e1ab429d86b9cc1820cd77
+  guid: 321f79a02409b44f87aa390adb0925f8
   Banks:
   - {fileID: 114374517504767120}
   IsStream: 0
@@ -461,6 +602,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &114344335544488282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/BGone
+  guid: 1017b99ac3c98d43a813969ea2c506ff
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 197381
 --- !u!114 &114344806257320154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,11 +769,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: D:\MIM\Mim2\Assets\Sound\Thesis1AudioFMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636878451357262527
+  lastModified: 636880850473092607
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 15080864
+    Value: 14010816
   Exists: 1
 --- !u!114 &114386856082852514
 MonoBehaviour:
@@ -680,6 +844,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &114439633315551632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114462869511901294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +879,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 15080864
   Exists: 0
+--- !u!114 &114474752806386882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114475461954913968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +927,39 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114477923275574684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114497453746581984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114509154024463790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -786,7 +1014,39 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 197381
+--- !u!114 &114525458674655202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114526521463679408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114532768353946706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -904,7 +1164,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114110508303220188}
+  - {fileID: 114984448120931570}
   MinDistance: 0
   MaxDistance: 0
   Length: 51254
@@ -944,11 +1204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Sound\Thesis1AudioFMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636878451354409745
+  lastModified: 636880850473152445
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2380
+    Value: 2356
   Exists: 1
 --- !u!114 &114632078725000282
 MonoBehaviour:
@@ -1002,6 +1262,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114639111827384340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114645464359131314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/Mom
+  guid: 2a83fa263493914e9b3e10b979f8b085
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 39600
+--- !u!114 &114652255368635434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
   Min: 0
   Max: 1
   Default: 0
@@ -1090,6 +1405,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114694589826784964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114706520231293088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,6 +1476,38 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114740873887204222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114742040370871558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114742063856956606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,13 +1524,29 @@ MonoBehaviour:
   guid: 050f850653e50947978651ed2aa1dd5c
   Banks:
   - {fileID: 114374517504767120}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2713
+  Length: 14140
+--- !u!114 &114749270104971534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114759237593696550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,10 +1567,58 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 114638699057696522}
+  - {fileID: 114694589826784964}
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &114760474659607230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114782499734267332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114783053882963378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114787041869552554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1674,30 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114801003502883790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/BGMusic (2)
+  guid: 28cbfd39a865be468cafc27602571a0f
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114024440616209006}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 90219
 --- !u!114 &114802564971938602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1744,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 197381
+--- !u!114 &114820613839225092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114822392121560404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1380,6 +1847,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114874874353139942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OLD music/BGthree
+  guid: db3590e26e583e4a998717dec5f3083d
+  Banks:
+  - {fileID: 114374517504767120}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 197381
 --- !u!114 &114877919758872434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1925,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114890822683702220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114896608372486236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,6 +2060,54 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114935160977762118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114938707323558676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114943831421218040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114947046617474792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +2121,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114972204880900336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: transition
   Min: 0
   Max: 1
   Default: 0
@@ -1636,6 +2206,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 23576
+--- !u!114 &114984448120931570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pan
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114984952748798400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,7 +2258,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114914997088822278}
+  - {fileID: 114258125529162786}
   MinDistance: 0
   MaxDistance: 0
   Length: 90219

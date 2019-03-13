@@ -144,6 +144,8 @@
             <destination>{59d2b222-f2a3-4ded-b4b3-bd83ad0bc16f}</destination>
             <destination>{388ee692-dcad-4658-8d38-387f7f8f7c86}</destination>
             <destination>{42713829-c641-4ad1-9f38-56ea69594c43}</destination>
+            <destination>{3e740628-fb9e-4e08-9644-576c469a5ba6}</destination>
+            <destination>{5e09ebfb-cf0e-48fd-9e52-405fed8c8a6d}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{d325b9fa-826f-4a93-b80b-6dfa12480407}">
@@ -217,6 +219,37 @@
         </property>
         <property name="crossoverSlope">
             <value>0</value>
+        </property>
+    </object>
+    <object class="ThreeEQEffect" id="{3e740628-fb9e-4e08-9644-576c469a5ba6}">
+        <property name="lowGain">
+            <value>-64</value>
+        </property>
+        <property name="midGain">
+            <value>-24.5</value>
+        </property>
+        <property name="highGain">
+            <value>-9.5</value>
+        </property>
+        <property name="lowCrossover">
+            <value>1850</value>
+        </property>
+        <property name="highCrossover">
+            <value>2500</value>
+        </property>
+    </object>
+    <object class="SFXReverbEffect" id="{5e09ebfb-cf0e-48fd-9e52-405fed8c8a6d}">
+        <property name="decayTime">
+            <value>270</value>
+        </property>
+        <property name="lateDelay">
+            <value>18.5</value>
+        </property>
+        <property name="HFDecayRatio">
+            <value>19.5</value>
+        </property>
+        <property name="lowShelfGain">
+            <value>-13</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{baea761f-2d1e-4285-9d09-abca663dc978}"/>
