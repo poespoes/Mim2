@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 8650717532560694970}
   - component: {fileID: 8084420051420802852}
   - component: {fileID: 4020822785518694024}
+  - component: {fileID: 817806364}
   m_Layer: 0
   m_Name: ClimbingZone (6)
   m_TagString: Untagged
@@ -541,6 +542,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityScale: 0
+--- !u!114 &817806364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389254944974623539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/Climb
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1032914325483220483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1659,7 @@ GameObject:
   - component: {fileID: 7990324937038845454}
   - component: {fileID: 7990324937038845681}
   - component: {fileID: 181263116}
+  - component: {fileID: 817806366}
   m_Layer: 8
   m_Name: Cube (39)
   m_TagString: Untagged
@@ -1732,7 +1757,8 @@ PolygonCollider2D:
       - {x: 0.29388893, y: -1.1749188}
       - {x: 1.34816, y: -1.4099008}
       - {x: 2.2313771, y: -0.7973789}
-      - {x: 2.319356, y: 1.3200446}
+      - {x: 2.5580316, y: 1.978626}
+      - {x: 2.3455808, y: 1.4025011}
       - {x: 2.1801174, y: 0.7174366}
       - {x: 2.0706484, y: 0.12809631}
       - {x: 1.7601807, y: -0.09441156}
@@ -1741,6 +1767,29 @@ PolygonCollider2D:
       - {x: 0.8453935, y: -0.3930403}
       - {x: 0.5408755, y: -0.13646527}
       - {x: 0.4846823, y: 0.03451748}
+--- !u!114 &817806366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990324937038845682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &7990324937063759144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,6 +2463,7 @@ GameObject:
   - component: {fileID: 7990324937326328898}
   - component: {fileID: 7990324937326328901}
   - component: {fileID: 7990324937326328900}
+  - component: {fileID: 817806368}
   m_Layer: 8
   m_Name: Cube (32)
   m_TagString: Untagged
@@ -2506,6 +2556,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &817806368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990324937326328902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &7990324937344519504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,6 +4075,7 @@ GameObject:
   - component: {fileID: 7990324937876817121}
   - component: {fileID: 7990324937876817120}
   - component: {fileID: 7990324937876817123}
+  - component: {fileID: 817806367}
   m_Layer: 8
   m_Name: Cube (36)
   m_TagString: Untagged
@@ -4094,6 +4168,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &817806367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990324937876817125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &7990324937883163349
 GameObject:
   m_ObjectHideFlags: 0
@@ -5348,6 +5445,7 @@ GameObject:
   - component: {fileID: 7990324938237935401}
   - component: {fileID: 7990324938237935400}
   - component: {fileID: 7990324938237935403}
+  - component: {fileID: 817806365}
   m_Layer: 8
   m_Name: Cube (41)
   m_TagString: Untagged
@@ -5440,6 +5538,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &817806365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990324938237935405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &7990324938267416857
 GameObject:
   m_ObjectHideFlags: 0

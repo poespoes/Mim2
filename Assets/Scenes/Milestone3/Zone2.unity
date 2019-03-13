@@ -215,56 +215,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2668781059979704429, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -50.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668781059979704429, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 61.179993
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668781059979704429, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.521
-      objectReference: {fileID: 0}
-    - target: {fileID: 3337328846610783854, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -97.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3337328846610783854, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 71.48999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3337328846610783854, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.521
-      objectReference: {fileID: 0}
-    - target: {fileID: 952624046388836533, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 47.175995
-      objectReference: {fileID: 0}
-    - target: {fileID: 952624046388836533, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 84.74274
-      objectReference: {fileID: 0}
     - target: {fileID: 4512539534719251109, guid: a1b7ae5262669a643be8f2cdcffa06a0,
         type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 515475558}
-    - target: {fileID: 4512539534719251109, guid: a1b7ae5262669a643be8f2cdcffa06a0,
-        type: 3}
-      propertyPath: m_Priority
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 1930607558443306257, guid: a1b7ae5262669a643be8f2cdcffa06a0,
         type: 3}
       propertyPath: m_Follow
@@ -321,6 +276,7 @@ GameObject:
   - component: {fileID: 71135054}
   - component: {fileID: 71135053}
   - component: {fileID: 71135052}
+  - component: {fileID: 71135055}
   m_Layer: 8
   m_Name: Cube (19)
   m_TagString: Untagged
@@ -413,6 +369,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71135050}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &71135055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71135050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &71795266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +541,12 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
+        type: 2}
     - target: {fileID: 2708619975937519043, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -592,12 +577,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4.413513
       objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
 --- !u!1001 &105184326
@@ -733,6 +712,7 @@ GameObject:
   - component: {fileID: 130980779}
   - component: {fileID: 130980778}
   - component: {fileID: 130980777}
+  - component: {fileID: 130980780}
   m_Layer: 8
   m_Name: Cube (18)
   m_TagString: Untagged
@@ -825,6 +805,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130980775}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &130980780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130980775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &172943523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,101 +1256,6 @@ Transform:
   m_Father: {fileID: 1637515491}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &427969951
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 801291122}
-    m_Modifications:
-    - target: {fileID: 1674538771565102746, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Name
-      value: VineAudioTemp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -660.7959
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 62.64453
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.7593825
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -4.607383
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 20.533556
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 5.895809
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 127.121574
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 259350026407b2d4fb255bf9453a916c, type: 3}
---- !u!4 &427969952 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-    type: 3}
-  m_PrefabInstance: {fileID: 427969951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &482670883
 Rigidbody2D:
   serializedVersion: 4
@@ -4159,6 +4067,7 @@ GameObject:
   - component: {fileID: 559599225}
   - component: {fileID: 559599224}
   - component: {fileID: 559599223}
+  - component: {fileID: 559599226}
   m_Layer: 8
   m_Name: Cube (26)
   m_TagString: Untagged
@@ -4251,6 +4160,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559599221}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &559599226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559599221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &559811432
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,6 +6746,7 @@ GameObject:
   - component: {fileID: 599390561}
   - component: {fileID: 599390560}
   - component: {fileID: 599390559}
+  - component: {fileID: 599390562}
   m_Layer: 8
   m_Name: Cube (23)
   m_TagString: Untagged
@@ -6906,6 +6839,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599390557}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &599390562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599390557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &599510253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7581503255020645847, guid: 29f9239d91e1e114ba47fa281b1d24df,
@@ -7082,6 +7038,7 @@ GameObject:
   - component: {fileID: 664452914}
   - component: {fileID: 664452913}
   - component: {fileID: 664452912}
+  - component: {fileID: 664452915}
   m_Layer: 8
   m_Name: Cube (17)
   m_TagString: Untagged
@@ -7174,6 +7131,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664452910}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &664452915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664452910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &664800905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8240,9 +8220,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.29588, y: 193.45547, z: -0.7593825}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1330281112}
-  - {fileID: 427969952}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8637,6 +8615,12 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: 1.9969482
       objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
+        type: 2}
     - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8647,12 +8631,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.72
       objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
 --- !u!1001 &1069931969
@@ -9527,6 +9505,7 @@ GameObject:
   - component: {fileID: 1081953391}
   - component: {fileID: 1081953390}
   - component: {fileID: 1081953389}
+  - component: {fileID: 1081953392}
   m_Layer: 8
   m_Name: Cube (20)
   m_TagString: Untagged
@@ -9619,6 +9598,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081953387}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1081953392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081953387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &1103994724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 547715874144694504, guid: 5678fe00f18cc9b458120f682bb589a4,
@@ -9710,6 +9712,7 @@ GameObject:
   - component: {fileID: 1203411365}
   - component: {fileID: 1203411364}
   - component: {fileID: 1203411363}
+  - component: {fileID: 1203411366}
   m_Layer: 8
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -9802,6 +9805,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203411361}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1203411366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203411361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1222695101
 GameObject:
   m_ObjectHideFlags: 0
@@ -9874,111 +9900,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1330281111
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 801291122}
-    m_Modifications:
-    - target: {fileID: 1674538771565102746, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Name
-      value: VineAudioTemp (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -628.2959
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 76.24454
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.7593825
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.28184906
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9594588
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -32.741
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.32313055
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -5.279917
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 21.878624
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 5.895809
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674538771565101412, guid: 259350026407b2d4fb255bf9453a916c,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 127.121574
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 259350026407b2d4fb255bf9453a916c, type: 3}
---- !u!4 &1330281112 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1674538771565102747, guid: 259350026407b2d4fb255bf9453a916c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1330281111}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374239124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9991,6 +9912,7 @@ GameObject:
   - component: {fileID: 1374239128}
   - component: {fileID: 1374239127}
   - component: {fileID: 1374239126}
+  - component: {fileID: 1374239129}
   m_Layer: 8
   m_Name: Cube (27)
   m_TagString: Untagged
@@ -10083,6 +10005,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374239124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1374239129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374239124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1375574076
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10040,7 @@ GameObject:
   - component: {fileID: 1375574080}
   - component: {fileID: 1375574079}
   - component: {fileID: 1375574078}
+  - component: {fileID: 1375574081}
   m_Layer: 8
   m_Name: Cube (34)
   m_TagString: Untagged
@@ -10216,6 +10162,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375574076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1375574081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375574076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1379712300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7581503255020645847, guid: 29f9239d91e1e114ba47fa281b1d24df,
@@ -10422,6 +10391,12 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
+        type: 2}
     - target: {fileID: 2708619975937519043, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10462,12 +10437,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 10.878784
       objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
 --- !u!4 &1446909019 stripped
@@ -10602,6 +10571,7 @@ GameObject:
   - component: {fileID: 1457747197}
   - component: {fileID: 1457747196}
   - component: {fileID: 1457747195}
+  - component: {fileID: 1457747198}
   m_Layer: 0
   m_Name: ClimbingZone (4)
   m_TagString: Untagged
@@ -10710,6 +10680,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1457747198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457747193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/Climb
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1504709381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10788,6 +10781,7 @@ GameObject:
   - component: {fileID: 1505097647}
   - component: {fileID: 1505097646}
   - component: {fileID: 1505097645}
+  - component: {fileID: 1505097648}
   m_Layer: 8
   m_Name: Cube (22)
   m_TagString: Untagged
@@ -10880,6 +10874,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505097643}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1505097648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505097643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1514847217
 GameObject:
   m_ObjectHideFlags: 0
@@ -10892,6 +10909,7 @@ GameObject:
   - component: {fileID: 1514847221}
   - component: {fileID: 1514847220}
   - component: {fileID: 1514847219}
+  - component: {fileID: 1514847222}
   m_Layer: 8
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -10984,6 +11002,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514847217}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1514847222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514847217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1637515490
 GameObject:
   m_ObjectHideFlags: 0
@@ -11382,6 +11423,7 @@ GameObject:
   - component: {fileID: 1737572531}
   - component: {fileID: 1737572530}
   - component: {fileID: 1737572529}
+  - component: {fileID: 1737572532}
   m_Layer: 8
   m_Name: Cube (21)
   m_TagString: Untagged
@@ -11474,6 +11516,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737572527}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1737572532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737572527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1798364638
 GameObject:
   m_ObjectHideFlags: 0
@@ -13170,6 +13235,12 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
+        type: 2}
     - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -13190,12 +13261,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4.413513
       objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725940, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
 --- !u!1 &1926795170
@@ -13368,6 +13433,7 @@ GameObject:
   - component: {fileID: 1960595181}
   - component: {fileID: 1960595180}
   - component: {fileID: 1960595179}
+  - component: {fileID: 1960595182}
   m_Layer: 8
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -13460,6 +13526,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960595177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1960595182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960595177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Mim/Locomotion/JumpDowm
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1979499503
 GameObject:
   m_ObjectHideFlags: 0
@@ -13999,6 +14088,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1930607558443306257, guid: 7443d59b344c62842b7154c28a31acc6,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 515475558}
     - target: {fileID: 2668781059979704429, guid: 7443d59b344c62842b7154c28a31acc6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14014,11 +14108,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 4.0209694
       objectReference: {fileID: 0}
-    - target: {fileID: 1930607558443306257, guid: 7443d59b344c62842b7154c28a31acc6,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 515475558}
     - target: {fileID: 952624046388836533, guid: 7443d59b344c62842b7154c28a31acc6,
         type: 3}
       propertyPath: m_Offset.y
@@ -14196,13 +14285,13 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1758558472, guid: f915abe3c09ab3247905e036a5ff9726, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 65
-      objectReference: {fileID: 0}
     - target: {fileID: 1758558473, guid: f915abe3c09ab3247905e036a5ff9726, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758558472, guid: f915abe3c09ab3247905e036a5ff9726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f915abe3c09ab3247905e036a5ff9726, type: 3}
