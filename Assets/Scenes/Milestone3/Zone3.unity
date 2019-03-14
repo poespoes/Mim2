@@ -265,6 +265,87 @@ MonoBehaviour:
   offsetGeneral: 0.24
   speed: 1.23
   amplitude: 8
+--- !u!1 &17754043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17754044}
+  - component: {fileID: 17754046}
+  - component: {fileID: 17754045}
+  m_Layer: 0
+  m_Name: bgMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17754044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17754043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.5, y: -2.1, z: 0}
+  m_LocalScale: {x: 181.52014, y: 47.995388, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1419574487}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &17754045
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17754043}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022475824, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0449516, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &17754046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17754043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BGMUSIC1
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &34976037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1823,241 @@ PrefabInstance:
       propertyPath: timeToEnd
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4027648182302375216, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5001267
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182571732319, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181467156745, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000329
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181477976230, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181513527759, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181551403167, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.500009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181583263286, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.499984
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181589165832, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000155
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181603583333, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000049
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181669144906, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181689703017, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999758
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181718711283, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999918
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181727167525, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181728217998, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181892549963, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648181893101006, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182027533586, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999932
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182077467387, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182099742009, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999918
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182162296033, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182186688407, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.500005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182259998458, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182275097989, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999939
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182320503648, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000064
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182346844339, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182417232177, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182462004989, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999835
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182503085335, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.500012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182675096439, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182714016073, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182859803603, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999819
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182949084467, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999795
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182977238281, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999768
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648182983166795, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5002177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183063614016, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000042
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183102950937, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183220865748, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183227635712, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183299679769, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183320241240, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183358236867, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183363641978, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.5000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183475095781, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183486296177, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999876
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183530775184, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183570521321, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.4999778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027648183572747674, guid: 3164523620a25504e87d06387d1daaad,
+        type: 3}
+      propertyPath: m_Length
+      value: 1.500021
+      objectReference: {fileID: 0}
     - target: {fileID: 4027648182491870273, guid: 3164523620a25504e87d06387d1daaad,
         type: 3}
       propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverPosition.x
@@ -2752,242 +3068,13 @@ PrefabInstance:
       propertyPath: m_Solver.targetPosition.y
       value: 192.92348
       objectReference: {fileID: 0}
-    - target: {fileID: 4027648182302375216, guid: 3164523620a25504e87d06387d1daaad,
+    - target: {fileID: 5216974009148412105, guid: 3164523620a25504e87d06387d1daaad,
         type: 3}
-      propertyPath: m_Length
-      value: 1.5001267
+      propertyPath: Event
+      value: event:/Vine/VineMovement1
       objectReference: {fileID: 0}
-    - target: {fileID: 4027648182571732319, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000203
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181467156745, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000329
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181477976230, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181513527759, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000114
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181551403167, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.500009
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181583263286, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.499984
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181589165832, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000155
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181603583333, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000049
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181669144906, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181689703017, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999758
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181718711283, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999918
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181727167525, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.499998
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181728217998, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999936
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181892549963, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000025
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648181893101006, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182027533586, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999932
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182077467387, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000069
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182099742009, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999918
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182162296033, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000172
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182186688407, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.500005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182259998458, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000099
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182275097989, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999939
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182320503648, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000064
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182346844339, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182417232177, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000075
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182462004989, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999835
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182503085335, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.500012
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182675096439, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182714016073, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182859803603, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999819
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182949084467, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999795
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182977238281, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999768
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648182983166795, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5002177
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183063614016, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000042
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183102950937, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000191
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183220865748, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183227635712, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000124
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183299679769, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000166
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183320241240, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999824
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183358236867, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183363641978, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.5000013
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183475095781, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999853
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183486296177, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999876
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183530775184, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183570521321, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.4999778
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027648183572747674, guid: 3164523620a25504e87d06387d1daaad,
-        type: 3}
-      propertyPath: m_Length
-      value: 1.500021
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6109177813345631103, guid: 3164523620a25504e87d06387d1daaad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3164523620a25504e87d06387d1daaad, type: 3}
 --- !u!4 &82035556 stripped
 Transform:
@@ -3227,6 +3314,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127937914}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &134821534
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_MULTIPLY
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &142008560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,6 +4381,47 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!1 &230585340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1752335345173410021, guid: 3164523620a25504e87d06387d1daaad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1706996404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &230585342
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230585340}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 18.270802, y: 26.36979}
+      - {x: 12.176929, y: 30.735802}
+      - {x: 2.0328255, y: 23.495491}
+      - {x: -23.293896, y: 19.873802}
+      - {x: -27.23286, y: 9.742594}
+      - {x: -29.418102, y: -5.9782925}
+      - {x: -15.393993, y: -10.92478}
+      - {x: 4.3491096, y: -2.9859986}
+      - {x: 17.140919, y: -1.9700685}
+      - {x: 18.956226, y: 9.597483}
 --- !u!1 &244820025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,16 +4623,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.25
       objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 4.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -3.66
-      objectReference: {fileID: 0}
     - target: {fileID: 2708619975949922663, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_Offset.y
@@ -4480,6 +4632,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 4.413513
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
@@ -4845,6 +5007,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272668838}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &280865069
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &291919645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5920,40 +6116,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514151919}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &514393472
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &515475548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1960821232076618, guid: 72e71e0264d284f4ea354cd2799415b8,
@@ -6398,7 +6560,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &566334464
+--- !u!21 &571997639
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 9
@@ -6867,6 +7029,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &631455847
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_MULTIPLY ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &661585491
 GameObject:
   m_ObjectHideFlags: 0
@@ -7666,6 +7862,40 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!21 &840154195
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &851793099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9167,40 +9397,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!21 &1130585055
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1149049915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9356,16 +9552,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21652702064447706, guid: 23b03e8d623e83942844047be56e554e,
         type: 2}
-    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 6.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.33
-      objectReference: {fileID: 0}
     - target: {fileID: 2708619975949922663, guid: 7799f4d3ce42d4740ad87b924510e857,
         type: 3}
       propertyPath: m_Offset.y
@@ -9375,6 +9561,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 4.413513
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708619976027725939, guid: 7799f4d3ce42d4740ad87b924510e857,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7799f4d3ce42d4740ad87b924510e857, type: 3}
@@ -9804,6 +10000,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203175438}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1218479379
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1220134486
 GameObject:
   m_ObjectHideFlags: 0
@@ -10952,9 +11182,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419574486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.29588, y: 193.45547, z: -0.7593825}
+  m_LocalPosition: {x: -617, y: 201, z: -0.7593825}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 17754044}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11616,13 +11847,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1638463385054432648, guid: 72e71e0264d284f4ea354cd2799415b8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1562427885}
+    - target: {fileID: 1147911530041612614, guid: 72e71e0264d284f4ea354cd2799415b8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 571997639}
     - target: {fileID: 6282704402540054085, guid: 72e71e0264d284f4ea354cd2799415b8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1946855658}
+      objectReference: {fileID: 631455847}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e71e0264d284f4ea354cd2799415b8, type: 3}
+--- !u!21 &1514866926
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1523154452
 GameObject:
   m_ObjectHideFlags: 0
@@ -11727,12 +12002,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4512539534719251109, guid: 7443d59b344c62842b7154c28a31acc6,
+    - target: {fileID: 1930607558443306257, guid: 7443d59b344c62842b7154c28a31acc6,
         type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 515475558}
-    - target: {fileID: 1930607558443306257, guid: 7443d59b344c62842b7154c28a31acc6,
+    - target: {fileID: 4512539534719251109, guid: 7443d59b344c62842b7154c28a31acc6,
         type: 3}
       propertyPath: m_Follow
       value: 
@@ -11951,40 +12226,6 @@ MonoBehaviour:
   - {fileID: 388069619}
   - {fileID: 588223415}
   - {fileID: 1169563193}
---- !u!21 &1532234755
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1538637236
 GameObject:
   m_ObjectHideFlags: 0
@@ -12312,6 +12553,40 @@ MonoBehaviour:
   m_Length: 1.539052
   m_ChildTransform: {fileID: 1342708709}
   m_AttachedIK: {fileID: 0}
+--- !u!21 &1562427885
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1566129205
 GameObject:
   m_ObjectHideFlags: 0
@@ -12353,40 +12628,6 @@ Transform:
   m_Father: {fileID: 39684387}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1567330385
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_MULTIPLY
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1630971925
 GameObject:
   m_ObjectHideFlags: 0
@@ -14171,7 +14412,8 @@ PrefabInstance:
       propertyPath: timeToEnd
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6109177813345631103, guid: 3164523620a25504e87d06387d1daaad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3164523620a25504e87d06387d1daaad, type: 3}
 --- !u!4 &1706996405 stripped
 Transform:
@@ -14387,40 +14629,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726628315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1732194610
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1743063225
 GameObject:
   m_ObjectHideFlags: 0
@@ -14520,10 +14728,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 584317265, guid: c6a19d0f134f09649bc7359836a5a926, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6017289264993010579, guid: c6a19d0f134f09649bc7359836a5a926,
         type: 3}
       propertyPath: m_Color.a
@@ -14543,6 +14747,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 584317265, guid: c6a19d0f134f09649bc7359836a5a926, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a19d0f134f09649bc7359836a5a926, type: 3}
@@ -15116,6 +15324,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1800815081
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Grab
+  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1815203333
 GameObject:
   m_ObjectHideFlags: 0
@@ -15278,6 +15520,47 @@ Transform:
   m_Father: {fileID: 39684387}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1840776520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1752335345173410021, guid: 3164523620a25504e87d06387d1daaad,
+    type: 3}
+  m_PrefabInstance: {fileID: 82035555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1840776522
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840776520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 16.40797, y: 29.01054}
+      - {x: -5.4561653, y: 21.971874}
+      - {x: -7.920765, y: 13.951459}
+      - {x: -25.207508, y: 3.65672}
+      - {x: -23.69939, y: -5.467288}
+      - {x: -13.510853, y: -10.097491}
+      - {x: 0.09528732, y: -8.172488}
+      - {x: 7.2671623, y: -4.147067}
+      - {x: 17.368847, y: -2.6754944}
+      - {x: 18.375439, y: 15.402783}
 --- !u!1 &1848437099
 GameObject:
   m_ObjectHideFlags: 0
@@ -16198,40 +16481,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935051114}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1946855658
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Grab
-  m_Shader: {fileID: 4800000, guid: ed621c1d17b557843a19132a864c195b, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_OVERLAY ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1954517508
 PrefabInstance:
   m_ObjectHideFlags: 0
