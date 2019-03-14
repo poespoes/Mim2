@@ -26,8 +26,8 @@ public class OIMonster : MonoBehaviour
 			rampUp = 2;
 		}
 
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -51,7 +51,7 @@ public class OIMonster : MonoBehaviour
 
 	void Chase()
 	{
-        _sprite.color = new Color(255, 255, 255, 1);      //OI appears
+        _sprite.color = new Color(83, 206, 206, 1);      //OI appears
 
         if (PlayerStats.player.transform.position.x > this.transform.position.x)
 		{
@@ -77,7 +77,7 @@ public class OIMonster : MonoBehaviour
 		else
 		{
 			this.transform.position = this.transform.position;
-			_sprite.color = new Color(255, 255, 255, 0);      //OI fades away when its not chasing mim
+			_sprite.color = new Color(83, 206, 206, 0);      //OI fades away when its not chasing mim
 
             //chaseSequence.Kill();
         }

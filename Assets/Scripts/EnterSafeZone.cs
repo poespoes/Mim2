@@ -61,7 +61,7 @@ public class EnterSafeZone : MonoBehaviour
                 //PlayerStats.isInteractive = false;
                 other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
                 other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                other.GetComponent<Animator>().SetTrigger("isSleeping");
+                //other.GetComponent<Animator>().SetTrigger("isSleeping");
             }
             
         }

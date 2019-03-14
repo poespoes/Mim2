@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1752335345173410021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5814075422458922538}
+  - component: {fileID: 5216974009148412105}
+  - component: {fileID: 6109177813345631103}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5814075422458922538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752335345173410021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.3, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4027648181617803149}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5216974009148412105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752335345173410021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Vine/VineMovement
+  PlayEvent: 5
+  StopEvent: 6
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!61 &6109177813345631103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752335345173410021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16227722, y: 2.3818665}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 110.582, y: 25.415283}
+  m_EdgeRadius: 0
 --- !u!1 &4027648181467156747
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +1070,7 @@ Transform:
   m_Children:
   - {fileID: 4027648183362733273}
   - {fileID: 4027648182015434129}
+  - {fileID: 5814075422458922538}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1527,7 +1609,7 @@ Transform:
   - {fileID: 4027648181669144907}
   m_Father: {fileID: 4027648181727167526}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.338001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.339}
 --- !u!114 &4027648181728217998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2219,7 +2301,6 @@ GameObject:
   - component: {fileID: 4027648182015434129}
   - component: {fileID: 4027648182015434128}
   - component: {fileID: 4027648182015434135}
-  - component: {fileID: 8423185793487381273}
   m_Layer: 0
   m_Name: IKVine
   m_TagString: Untagged
@@ -2286,29 +2367,6 @@ MonoBehaviour:
   targetOverride: 0
   foundLight: 0
   inactiveTarget: {fileID: 0}
---- !u!114 &8423185793487381273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4027648182015434130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Vine/VineMovement
-  PlayEvent: 5
-  StopEvent: 6
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &4027648182027533580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,7 +4249,7 @@ Transform:
   - {fileID: 4027648182977238282}
   m_Father: {fileID: 4027648182302375217}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.77300006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.772}
 --- !u!114 &4027648182571732319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7709,7 +7767,7 @@ Transform:
   - {fileID: 4027648182503085328}
   m_Father: {fileID: 4027648182320503649}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.272001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.273}
 --- !u!114 &4027648183530775184
 MonoBehaviour:
   m_ObjectHideFlags: 0
