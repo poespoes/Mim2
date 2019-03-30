@@ -57,7 +57,7 @@ public class FearControl : MonoBehaviour
 		}
 	}
 
-	void LightLessFear()
+	void LightLessFear() //controls how afraid or not afraid they are when the light is off
 	{
 		if (PlayerStats.lightlessTimer > (0.6 * PlayerStats.originalLightlessTimer))
 		{

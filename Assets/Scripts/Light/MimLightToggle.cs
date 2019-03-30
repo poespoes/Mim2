@@ -32,7 +32,7 @@ public class MimLightToggle : MonoBehaviour
 	}
 
 
-	public void MimLightOn()
+	public void MimLightOn() 
 	{
 		PlayerStats.mimLit = true;
 		if (PlayerStats.lightlessTimer < PlayerStats.originalLightlessTimer)
@@ -43,7 +43,7 @@ public class MimLightToggle : MonoBehaviour
 
 	}
 
-	public void MimLightOff()
+	public void MimLightOff() //This also triggers the lightless fear
 	{
 		PlayerStats.mimLit = false;
 		if (PlayerStats.lightlessTimer > 0)

@@ -68,13 +68,14 @@ public class PlayerStats : MonoBehaviour
 
 		CanToggle = canToggle;
 
+		//kills player if they're too afraid - might consider removing
         if(lightlessTimer <= 0) {
             Die();
         }
 	}
 
 
-	public void FearChange()
+	public void FearChange() //Changes the animator's layer weight based on current fear level
 	{
 		if (fear == 0)
 		{
