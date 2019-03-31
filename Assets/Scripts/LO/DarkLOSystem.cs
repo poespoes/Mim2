@@ -6,6 +6,7 @@ public class DarkLOSystem : MonoBehaviour
 {
     public float lifetime;
     public bool canDecrease;
+    public GameObject lOParticles;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,9 @@ public class DarkLOSystem : MonoBehaviour
         }
         
         canDecrease = false;
+
+        lOParticles = this.gameObject.transform.Find("MimParticleSystem").gameObject;
+        lOParticles.SetActive(true);
     }
 
     // Update is called once per frame
@@ -37,6 +41,9 @@ public class DarkLOSystem : MonoBehaviour
         }
         
     }
-    
-    
+
+    private void OnDestroy()
+    {
+        lOParticles.SetActive(false);
+    }
 }
