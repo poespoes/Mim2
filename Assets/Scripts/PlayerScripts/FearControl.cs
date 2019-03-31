@@ -13,7 +13,10 @@ public class FearControl : MonoBehaviour
 	public float veryscaredRadius;
 	public bool unAfraid; //right now this does nothing
 
-	public bool notAfraidOfOI; 
+	public bool notAfraidOfOI;
+
+	public float fearDecreaseFactor; //how fast she regains her courage in the light
+	public float fearIncreaseFactor; //how fast she becomes afraid in the dark
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +35,11 @@ public class FearControl : MonoBehaviour
 		{
 			FearCheck();
 		}
-		
 
-		LightLessFear();
+
+			LightLessFear();
+	
+		
 		
 	}
 
@@ -59,6 +64,8 @@ public class FearControl : MonoBehaviour
 
 	void LightLessFear() //controls how afraid or not afraid they are when the light is off
 	{
+		Debug.Log("Fear the darkness!!!");
+		
 		if (PlayerStats.lightlessTimer > (0.6 * PlayerStats.originalLightlessTimer))
 		{
 			PlayerStats.fear = 0;

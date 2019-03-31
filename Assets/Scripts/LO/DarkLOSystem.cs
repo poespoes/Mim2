@@ -15,7 +15,11 @@ public class DarkLOSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        lifetime = 5;
+        if (lifetime == 0)
+        {
+            lifetime = 5;
+        }
+        
         canDecrease = false;
     }
 

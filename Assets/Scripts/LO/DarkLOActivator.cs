@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class DarkLOActivator : MonoBehaviour
 {
+    public int lifeTime;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (lifeTime == 0)
+        {
+            lifeTime = 5;
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +33,8 @@ public class DarkLOActivator : MonoBehaviour
             }
             else
             {
-                
+                other.GetComponent<DarkLOSystem>().canDecrease = false;
+                other.GetComponent<DarkLOSystem>().lifetime = lifeTime;
             }
         }
     }

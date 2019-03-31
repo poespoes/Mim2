@@ -6,6 +6,7 @@ public class MimLightToggle : MonoBehaviour
 {
 	public float lightTimer;
 	
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -32,7 +33,7 @@ public class MimLightToggle : MonoBehaviour
 	}
 
 
-	public void MimLightOn() 
+	public void MimLightOn() //Lightless timer goes down here
 	{
 		PlayerStats.mimLit = true;
 		if (PlayerStats.lightlessTimer < PlayerStats.originalLightlessTimer)
@@ -46,7 +47,7 @@ public class MimLightToggle : MonoBehaviour
 	public void MimLightOff() //This also triggers the lightless fear
 	{
 		PlayerStats.mimLit = false;
-		if (PlayerStats.lightlessTimer > 0)
+		if (PlayerStats.lightlessTimer > 0 && this.GetComponent<DarkLOSystem>()==null) //hopefully prevents her from being afraid in the dark when she has dark LO attached
 		{
 			PlayerStats.lightlessTimer -= Time.deltaTime;
 		}
