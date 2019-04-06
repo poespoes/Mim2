@@ -13,17 +13,33 @@ public class FreezePlayer : MonoBehaviour
 
     public UnityEvent freezeEvents;
 
+    public bool hasTriggered;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if (hasTriggered == true)
+        {
+            PlayerStats.isInteractive = false;
+            Debug.Log("Player paralyzed");
+        }
     }
 
     public static void Freeze()
     {
         Debug.Log("Go to sleep");
         PlayerStats.isInteractive = false;
-        instance.freezeEvents.Invoke();
+        instance.LocalFreeze();
 
+    }
+
+    public void LocalFreeze()
+    {
+        StartCoroutine(SlowFreeze());
     }
 
     public void MovePlayer()
@@ -37,7 +53,15 @@ public class FreezePlayer : MonoBehaviour
 
     public void SendPlayerToSleep()
     {
-        PlayerStats.player.GetComponent<Animator>().SetTrigger("isSleeping");
+        PlayerStats.player.GetComponent<Animator>().SetTrigger("longSleep");
+    }
+
+    public IEnumerator SlowFreeze()
+    {
+        hasTriggered = true;
+        yield return new WaitForSeconds(0.5f);
+        instance.freezeEvents.Invoke();
+        yield return null;
     }
  
     

@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 	public static Transform playerTransform;
 	public static GameObject player;
 	public static bool isInteractive;
+	public bool _isInteractive;
 	public static float moveSpeed;
     public float fear1multiplier;
     public float fear2multiplier;
@@ -50,6 +51,7 @@ public class PlayerStats : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		_isInteractive = isInteractive;
 
 		CanDie = canDie;
 		
@@ -75,7 +77,12 @@ public class PlayerStats : MonoBehaviour
             Die();
         }
 
-		
+		//tempTest
+
+		if (Input.GetKeyDown(KeyCode.M))
+		{
+			isInteractive = !isInteractive;
+		}
 	}
 
 

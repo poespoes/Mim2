@@ -92,7 +92,9 @@ public class PlayerMovement : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Player can't move");
+			StopMoving();
+			
+
 		}
 		
 		Jump();
@@ -111,57 +113,64 @@ public class PlayerMovement : MonoBehaviour
 
 	void Move()
 	{
-		anim.SetBool("isClimbing",false);
-
-		
-		if (Input.GetAxisRaw("Horizontal") != 0)
+		if (PlayerStats.isInteractive == true)
 		{
-			//rb.constraints = RigidbodyConstraints2D.None;
-			
-			anim.SetBool("isWalking",true);
-			
-			rb.velocity =
-				new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * moveSpeed, 0.8f), rb.velocity.y);
 
-			
-			
 
-			if (Input.GetAxisRaw("Horizontal") > 0)
+			anim.SetBool("isClimbing", false);
+
+
+			if (Input.GetAxisRaw("Horizontal") != 0)
 			{
-				//this.transform.Find("mSprite").GetComponent<SpriteRenderer>().flipX = false;
+				//rb.constraints = RigidbodyConstraints2D.None;
 
-				foreach (SpriteRenderer _sprite in spritesToFlip)
+				anim.SetBool("isWalking", true);
+
+				rb.velocity =
+					new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * moveSpeed, 0.8f), rb.velocity.y);
+
+
+
+
+				if (Input.GetAxisRaw("Horizontal") > 0)
 				{
-					_sprite.flipX = false;
+					//this.transform.Find("mSprite").GetComponent<SpriteRenderer>().flipX = false;
+
+					foreach (SpriteRenderer _sprite in spritesToFlip)
+					{
+						_sprite.flipX = false;
+					}
+
+
 				}
-				
-				
-			}else if (Input.GetAxisRaw("Horizontal") < 0)
-			{
-				//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
-				foreach (SpriteRenderer _sprite in spritesToFlip)
+				else if (Input.GetAxisRaw("Horizontal") < 0)
 				{
-					_sprite.flipX = true;
+					//this.transform.Find("MimSprite").GetComponent<SpriteRenderer>().flipX = true;
+					foreach (SpriteRenderer _sprite in spritesToFlip)
+					{
+						_sprite.flipX = true;
+					}
 				}
+
+				Debug.Log("Moving");
+
 			}
-			
-			Debug.Log("Moving");
-			
-		}
 
-		else
-		{
-			//rb.constraints = RigidbodyConstraints2D.FreezePositionY|RigidbodyConstraints2D.FreezePositionX|RigidbodyConstraints2D.FreezeRotation;
+			else
+			{
+				//rb.constraints = RigidbodyConstraints2D.FreezePositionY|RigidbodyConstraints2D.FreezePositionX|RigidbodyConstraints2D.FreezeRotation;
 
-			float horizontalSpeed=0;
-			DOTween.To(()=> horizontalSpeed, x=> horizontalSpeed = x, 0, 1);
-			
-			anim.SetBool("isWalking",false);
-			
-			rb.velocity = new Vector2(horizontalSpeed,rb.velocity.y);
-	
-			Debug.Log("Not moving");
+				float horizontalSpeed = 0;
+				DOTween.To(() => horizontalSpeed, x => horizontalSpeed = x, 0, 1);
+
+				anim.SetBool("isWalking", false);
+
+				rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+
+				Debug.Log("Not moving");
+			}
 		}
+		
 	}
 
 	public void Climb()
@@ -342,6 +351,28 @@ public class PlayerMovement : MonoBehaviour
 		PlayerStats.isInteractive = true;
 		moveSpeed = originalMoveSpeed;
 		anim.SetBool("longFall", false);
+		ResumeMovement();
+	}
+
+	public void StopMoving()
+	{
+		Debug.Log("Player can't move");
+		rb.velocity = new Vector2(0, 0);
+		rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+		if (grounded == true)
+		{
+			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+		}
+
+		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		
+		anim.SetBool("isWalking", false);
+	}
+
+	public void ResumeMovement()
+	{
+		rb.constraints = RigidbodyConstraints2D.None;
+		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 	}
 	
 	void NormalizeSlope () {
