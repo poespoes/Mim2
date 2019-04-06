@@ -357,11 +357,17 @@ public class PlayerMovement : MonoBehaviour
 	public void StopMoving()
 	{
 		Debug.Log("Player can't move");
+		
 		rb.velocity = new Vector2(0, 0);
 		rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 		if (grounded == true)
 		{
 			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+			rb.gravityScale = PlayerStats.originalGravityScale;
+		}
+		else
+		{
+			rb.gravityScale = 100;
 		}
 
 		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -373,6 +379,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		rb.constraints = RigidbodyConstraints2D.None;
 		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		
 	}
 	
 	void NormalizeSlope () {

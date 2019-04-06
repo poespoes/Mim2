@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour
 	public static float originalLightlessTimer;
 
 
+	public static float originalGravityScale;
 
     private void Awake()
 	{
@@ -38,7 +39,8 @@ public class PlayerStats : MonoBehaviour
 		player = this.transform.gameObject;
 		lightlessTimer = _lightLessTimer;
 		originalLightlessTimer = _lightLessTimer;
-		
+		originalGravityScale = player.GetComponent<Rigidbody2D>().gravityScale;
+
 	}
 	// Use this for initialization
 	
