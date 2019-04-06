@@ -29,6 +29,7 @@ public class PlayerStats : MonoBehaviour
 	public static float originalLightlessTimer;
 
 
+
     private void Awake()
 	{
 		isInteractive = true;
@@ -36,6 +37,7 @@ public class PlayerStats : MonoBehaviour
 		player = this.transform.gameObject;
 		lightlessTimer = _lightLessTimer;
 		originalLightlessTimer = _lightLessTimer;
+		
 	}
 	// Use this for initialization
 	
@@ -72,6 +74,8 @@ public class PlayerStats : MonoBehaviour
         if(lightlessTimer <= 0) {
             Die();
         }
+
+		
 	}
 
 

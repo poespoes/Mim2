@@ -46,10 +46,14 @@ public class NewVineTrigger : MonoBehaviour
             }
         }
 
-        if (inactiveTarget.GetComponent<GlowingLight>()!=null && inactiveTarget.GetComponent<GlowingLight>().objectLit)
+        if(inactiveTarget != null)
         {
-            ChaseOtherLight(inactiveTarget.gameObject);
+            if (inactiveTarget.GetComponent<GlowingLight>()!=null && inactiveTarget.GetComponent<GlowingLight>().objectLit)
+            {
+                ChaseOtherLight(inactiveTarget.gameObject);
+            }
         }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)

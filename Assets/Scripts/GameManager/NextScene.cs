@@ -31,6 +31,7 @@ public class NextScene : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         anim.SetTrigger("isFadingOut");
+        FreezePlayer.Freeze();
     }
 
     private void LoadScene() {
