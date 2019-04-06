@@ -32,6 +32,8 @@ public class PlayerStats : MonoBehaviour
 
 	public static float originalGravityScale;
 
+	public static bool grounded;
+	
     private void Awake()
 	{
 		isInteractive = true;
@@ -85,6 +87,8 @@ public class PlayerStats : MonoBehaviour
 		{
 			isInteractive = !isInteractive;
 		}
+
+		grounded = player.GetComponent<PlayerMovement>().grounded;
 	}
 
 

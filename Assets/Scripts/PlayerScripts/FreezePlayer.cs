@@ -26,6 +26,11 @@ public class FreezePlayer : MonoBehaviour
         {
             PlayerStats.isInteractive = false;
             Debug.Log("Player paralyzed");
+            if (PlayerStats.grounded == true)
+            {
+                SendPlayerToSleep();
+            }
+            
         }
     }
 
@@ -39,6 +44,7 @@ public class FreezePlayer : MonoBehaviour
 
     public void LocalFreeze()
     {
+        
         StartCoroutine(SlowFreeze());
     }
 
@@ -53,7 +59,11 @@ public class FreezePlayer : MonoBehaviour
 
     public void SendPlayerToSleep()
     {
-        PlayerStats.player.GetComponent<Animator>().SetTrigger("longSleep");
+        if (PlayerStats.grounded == true)
+        {
+            PlayerStats.player.GetComponent<Animator>().SetTrigger("longSleep");
+        }
+        
     }
 
     public IEnumerator SlowFreeze()
