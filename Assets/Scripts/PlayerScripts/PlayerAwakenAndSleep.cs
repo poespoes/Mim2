@@ -29,7 +29,11 @@ public class PlayerAwakenAndSleep : MonoBehaviour
 
     public void SleepTrigger()
     {
-        this.GetComponent<Animator>().SetTrigger("isSleeping");
+        if (PlayerStats.startsSleeping == true)
+        {
+            this.GetComponent<Animator>().SetTrigger("isSleeping");
+        }
+        
     }
 
     public void Awaken()

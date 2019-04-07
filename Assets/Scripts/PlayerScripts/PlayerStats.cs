@@ -35,6 +35,9 @@ public class PlayerStats : MonoBehaviour
 	public static float originalAngularDrag;
 
 	public static bool grounded;
+
+	public static bool startsSleeping;
+	public bool _startsSleeping;
 	
     private void Awake()
 	{
@@ -46,6 +49,7 @@ public class PlayerStats : MonoBehaviour
 		originalGravityScale = player.GetComponent<Rigidbody2D>().gravityScale;
 		originalAngularDrag = player.GetComponent<Rigidbody2D>().angularDrag;
 		originalLinearDrag = player.GetComponent<Rigidbody2D>().drag;
+		startsSleeping = _startsSleeping;
 
 
 	}

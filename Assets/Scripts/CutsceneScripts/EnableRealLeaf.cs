@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnableRealLeaf : MonoBehaviour
+{
+    public MimLightToggle mimLightToggle;
+    public GameObject mimLeafGameObject;
+    public IntroScalelightWhenPressed scaleLeaf;
+    
+    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        mimLightToggle.enabled = false;
+        mimLeafGameObject.SetActive(false);
+    }
+
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (scaleLeaf.maxSizeReached == true)
+        {
+            mimLightToggle.enabled = true;
+            mimLeafGameObject.SetActive(true);
+            Destroy(scaleLeaf.gameObject);
+        }
+    }
+}

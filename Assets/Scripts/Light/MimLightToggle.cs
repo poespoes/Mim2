@@ -7,6 +7,7 @@ public class MimLightToggle : MonoBehaviour
 	public float lightTimer;
 	
 	
+	
 	// Use this for initialization
 	void Start ()
 	{
