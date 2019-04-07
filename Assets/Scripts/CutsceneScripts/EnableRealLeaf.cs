@@ -7,14 +7,21 @@ public class EnableRealLeaf : MonoBehaviour
     public MimLightToggle mimLightToggle;
     public GameObject mimLeafGameObject;
     public IntroScalelightWhenPressed scaleLeaf;
+
+    public float originalMoveSpeed;
     
     // Start is called before the first frame update
 
     private void Awake()
     {
+        originalMoveSpeed = PlayerStats.moveSpeed;
+        
+        
         mimLightToggle.enabled = false;
         mimLeafGameObject.SetActive(false);
         scaleLeaf.enabled = false;
+        
+        
     }
 
     void Start()
