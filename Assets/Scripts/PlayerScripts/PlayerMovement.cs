@@ -176,9 +176,13 @@ public class PlayerMovement : MonoBehaviour
 
 				if (grounded == true)
 				{
-					rb.angularDrag = 100; //set drag to high so that they don't slide down
+					rb.angularDrag = 100;
 					rb.drag = 100;
-					
+
+				}
+				else
+				{
+					ResetDrag();
 				}
 				
 
@@ -188,10 +192,18 @@ public class PlayerMovement : MonoBehaviour
 		
 	}
 
+	public void ResetDrag()
+	{
+		rb.angularDrag = PlayerStats.originalAngularDrag;
+		rb.drag = PlayerStats.originalLinearDrag;
+	}
+
 	public void Climb()
 	{
 		if (climbToggle == true)
 		{
+			
+			ResetDrag();
 
 
 			anim.SetBool("isClimbing", true);
@@ -249,10 +261,13 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void Jump()
 	{
+		ResetDrag();
+		
 		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0 && PlayerStats.isInteractive == true)
 		{
 			grounded = false;
 			climbToggle = true;
+			
 		}
 		
 		if (grounded == true)
