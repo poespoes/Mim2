@@ -831,7 +831,7 @@ MonoBehaviour:
   - {fileID: 1853090174}
   _isClimbing: 0
   gravityScale: 0
-  longFallThreshold: 1
+  longFallThreshold: 1000
   timeFalling: 0
 --- !u!114 &114807038206879226
 MonoBehaviour:
@@ -849,6 +849,7 @@ MonoBehaviour:
   Fear: 0
   CanToggle: 0
   CanDie: 0
+  _isInteractive: 0
   fear1multiplier: 0.7
   fear2multiplier: 0.35
   _lightLessTimer: 10
@@ -917,6 +918,8 @@ MonoBehaviour:
   veryscaredRadius: 6
   unAfraid: 0
   notAfraidOfOI: 0
+  fearDecreaseFactor: 0
+  fearIncreaseFactor: 0
 --- !u!114 &8522548249109468534
 MonoBehaviour:
   m_ObjectHideFlags: 0
