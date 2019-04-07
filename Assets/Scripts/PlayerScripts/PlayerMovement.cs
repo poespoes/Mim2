@@ -89,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
 				Move();	
 			}
 			
+			Jump();
+			
 		}
 		else
 		{
@@ -97,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
 		}
 		
-		Jump();
+		
 		SetAnimationStage();
 
 		if (Input.GetKeyDown(KeyCode.E)) //stop climbing
