@@ -14,6 +14,7 @@ public class EnableRealLeaf : MonoBehaviour
     {
         mimLightToggle.enabled = false;
         mimLeafGameObject.SetActive(false);
+        scaleLeaf.enabled = false;
     }
 
     void Start()
@@ -24,6 +25,11 @@ public class EnableRealLeaf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerStats.isInteractive == true)
+        {
+            scaleLeaf.enabled = true;
+        }
+        
         if (scaleLeaf.maxSizeReached == true)
         {
             mimLightToggle.enabled = true;
