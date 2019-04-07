@@ -236,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void Jump()
 	{
-		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0)
+		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0 && PlayerStats.isInteractive == true)
 		{
 			grounded = false;
 			climbToggle = true;
