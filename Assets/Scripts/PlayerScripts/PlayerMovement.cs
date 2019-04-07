@@ -126,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
 			{
 				//rb.constraints = RigidbodyConstraints2D.None;
 
+
+				rb.drag = PlayerStats.originalLinearDrag;
+				rb.angularDrag = PlayerStats.originalAngularDrag;
+
 				anim.SetBool("isWalking", true);
 
 				rb.velocity =
@@ -168,6 +172,15 @@ public class PlayerMovement : MonoBehaviour
 				anim.SetBool("isWalking", false);
 
 				rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+
+
+				if (grounded == true)
+				{
+					rb.angularDrag = 100; //set drag to high so that they don't slide down
+					rb.drag = 100;
+					
+				}
+				
 
 				Debug.Log("Not moving");
 			}

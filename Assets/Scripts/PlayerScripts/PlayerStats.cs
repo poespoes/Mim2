@@ -31,6 +31,8 @@ public class PlayerStats : MonoBehaviour
 
 
 	public static float originalGravityScale;
+	public static float originalLinearDrag;
+	public static float originalAngularDrag;
 
 	public static bool grounded;
 	
@@ -42,6 +44,9 @@ public class PlayerStats : MonoBehaviour
 		lightlessTimer = _lightLessTimer;
 		originalLightlessTimer = _lightLessTimer;
 		originalGravityScale = player.GetComponent<Rigidbody2D>().gravityScale;
+		originalAngularDrag = player.GetComponent<Rigidbody2D>().angularDrag;
+		originalLinearDrag = player.GetComponent<Rigidbody2D>().drag;
+
 
 	}
 	// Use this for initialization
