@@ -109,8 +109,16 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 		NormalizeSlope();
-		
-		
+
+		if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Jump")==0 && PlayerStats.grounded==true)
+		{
+			rb.angularDrag = 1000;
+			rb.drag = 1000;
+		}
+		else
+		{
+			ResetDrag();
+		}
 	}
 
 	void Move()
@@ -174,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
 				rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
 
 
+				/*
 				if (grounded == true)
 				{
 					rb.angularDrag = 100;
@@ -183,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
 				else
 				{
 					ResetDrag();
-				}
+				}*/
 				
 
 				Debug.Log("Not moving");
@@ -203,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
 		if (climbToggle == true)
 		{
 			
-			ResetDrag();
+			//ResetDrag();
 
 
 			anim.SetBool("isClimbing", true);
@@ -261,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	public void Jump()
 	{
-		ResetDrag();
+		//ResetDrag();
 		
 		if (isClimbing == true && Input.GetAxisRaw("Vertical")>0 && PlayerStats.isInteractive == true)
 		{
