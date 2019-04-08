@@ -6,6 +6,7 @@ public class EnableRealLeaf : MonoBehaviour
 {
     public MimLightToggle mimLightToggle;
     public GameObject mimLeafGameObject;
+    public GameObject mimLightGameObject;
     public IntroScalelightWhenPressed scaleLeaf;
 
     public float originalMoveSpeed;
@@ -19,6 +20,7 @@ public class EnableRealLeaf : MonoBehaviour
         
         mimLightToggle.enabled = false;
         mimLeafGameObject.SetActive(false);
+        mimLightGameObject.SetActive(false);
         scaleLeaf.enabled = false;
         
         
@@ -41,6 +43,7 @@ public class EnableRealLeaf : MonoBehaviour
         {
             mimLightToggle.enabled = true;
             mimLeafGameObject.SetActive(true);
+            mimLightGameObject.SetActive(true);
             Destroy(scaleLeaf.gameObject);
         }
     }
