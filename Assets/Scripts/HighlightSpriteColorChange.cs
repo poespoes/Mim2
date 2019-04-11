@@ -10,7 +10,8 @@ public class HighlightSpriteColorChange : MonoBehaviour
     public Color32 colorA;
     public Color32 colorB;
     public float colorChangeDuration;
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
