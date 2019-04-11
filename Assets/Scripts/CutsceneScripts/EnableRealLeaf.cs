@@ -10,6 +10,9 @@ public class EnableRealLeaf : MonoBehaviour
     public IntroScalelightWhenPressed scaleLeaf;
 
     public float originalMoveSpeed;
+
+    public float timer;
+    public float timeTilCanPlay;
     
     // Start is called before the first frame update
 
@@ -34,7 +37,9 @@ public class EnableRealLeaf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerStats.isInteractive == true)
+        timer += Time.deltaTime;
+
+        if (PlayerStats.isInteractive == true && timer >= timeTilCanPlay)
         {
             scaleLeaf.enabled = true;
         }
