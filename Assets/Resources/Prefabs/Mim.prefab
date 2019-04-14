@@ -100,6 +100,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4284070121
   colorChangeDuration: 2
+  layerName: 
+  setOrderInLayerTo: 0
 --- !u!1 &450880666
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +374,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4284070121
   colorChangeDuration: 2
+  layerName: 
+  setOrderInLayerTo: 0
 --- !u!1 &641056682
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +568,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4284070121
   colorChangeDuration: 2
+  layerName: 
+  setOrderInLayerTo: 0
 --- !u!1 &1939214559
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948326504970282}
   - component: {fileID: 212439626913262004}
+  - component: {fileID: 3058497721224461780}
   m_Layer: 0
   m_Name: MimSprite
   m_TagString: Untagged
@@ -673,6 +680,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3058497721224461780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007318986518746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd18ef5b0b67ccf4ab6f06fa8f326adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRend: {fileID: 0}
+  colorA:
+    serializedVersion: 2
+    rgba: 4294967295
+  colorB:
+    serializedVersion: 2
+    rgba: 4278190335
+  colorChangeDuration: 0.1
+  layerName: 3_Foreground
+  setOrderInLayerTo: 200
 --- !u!1 &1166281455133338
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +855,7 @@ MonoBehaviour:
   - {fileID: 212439626913262004}
   - {fileID: 75512746}
   - {fileID: 601661031}
-  - {fileID: 3403803813111555533}
-  - {fileID: 3403803813111555533}
+  - {fileID: 6678443271827233466}
   - {fileID: 1853090174}
   _isClimbing: 0
   gravityScale: 0
@@ -850,9 +878,10 @@ MonoBehaviour:
   CanToggle: 0
   CanDie: 0
   _isInteractive: 0
-  fear1multiplier: 0.7
+  fear1multiplier: 0.6
   fear2multiplier: 0.35
-  _lightLessTimer: 10
+  _lightLessTimer: 9
+  _startsSleeping: 0
 --- !u!70 &70000110958014950
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -920,6 +949,8 @@ MonoBehaviour:
   notAfraidOfOI: 0
   fearDecreaseFactor: 0
   fearIncreaseFactor: 0
+  TimeUntilFear1: 0.7
+  TimeUntilFear2: 0.35
 --- !u!114 &8522548249109468534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,6 +1157,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 16777215
   colorChangeDuration: 1
+  layerName: 
+  setOrderInLayerTo: 0
 --- !u!114 &1504709386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,7 +1643,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -154708191
   m_SortingLayer: -5
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b4c4d19592d8e284894b0220c98b1572, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1642,6 +1675,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   colorChangeDuration: 0.5
+  layerName: 3_Foreground
+  setOrderInLayerTo: 201
 --- !u!1 &4769079121653484719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1793,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 16777215
   colorChangeDuration: 0.5
+  layerName: 
+  setOrderInLayerTo: 0
 --- !u!114 &1504709387
 MonoBehaviour:
   m_ObjectHideFlags: 0

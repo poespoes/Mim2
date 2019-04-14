@@ -22,7 +22,9 @@ public class OISpawner : MonoBehaviour
 	{
 		BottleOIMonster,
         BottleOIMonster1,
-        ShoeOIMonster
+        ShoeOIMonster,
+        OIMonster1,
+        OIMonster2
 
 	};
 

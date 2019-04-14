@@ -18,8 +18,11 @@ public class FearControl : MonoBehaviour
 	public float fearDecreaseFactor; //how fast she regains her courage in the light
 	public float fearIncreaseFactor; //how fast she becomes afraid in the dark
 
-	// Use this for initialization
-	void Start () {
+    public float TimeUntilFear1; //Time out of LightlessTimer before she enters fear 1
+    public float TimeUntilFear2; //Time out of LightlessTimer before she enters fear 2
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -66,12 +69,12 @@ public class FearControl : MonoBehaviour
 	{
 		Debug.Log("Fear the darkness!!!");
 		
-		if (PlayerStats.lightlessTimer > (0.6 * PlayerStats.originalLightlessTimer))
+		if (PlayerStats.lightlessTimer > (TimeUntilFear1 * PlayerStats.originalLightlessTimer))
 		{
 			PlayerStats.fear = 0;
 			PlayerStats.lightlessFear = false;
 		}
-		else if (PlayerStats.lightlessTimer > (0.3 * PlayerStats.originalLightlessTimer))
+		else if (PlayerStats.lightlessTimer > (TimeUntilFear2 * PlayerStats.originalLightlessTimer))
 		{
 			PlayerStats.fear = 1;
 			PlayerStats.lightlessFear = true;

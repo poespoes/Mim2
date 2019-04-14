@@ -10,7 +10,12 @@ public class HighlightSpriteColorChange : MonoBehaviour
     public Color32 colorA;
     public Color32 colorB;
     public float colorChangeDuration;
-    
+    private string originLayerName;
+    private int originOrderInLayer;
+
+    public string layerName;
+    public int setOrderInLayerTo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,12 @@ public class HighlightSpriteColorChange : MonoBehaviour
         {
             _spriteRend = this.gameObject.GetComponent<SpriteRenderer>();
         }
+
+        _spriteRend.sortingLayerName = originLayerName;
+        _spriteRend.sortingOrder = originOrderInLayer;
+
+        _spriteRend.sortingLayerName = layerName;
+        _spriteRend.sortingOrder = originOrderInLayer;
     }
 
     // Update is called once per frame
@@ -26,10 +37,14 @@ public class HighlightSpriteColorChange : MonoBehaviour
         if (PlayerStats.mimLit == true)
         {
             _spriteRend.DOColor(colorA, colorChangeDuration);
+            _spriteRend.sortingLayerName = originLayerName;
+            _spriteRend.sortingOrder = originOrderInLayer;
         }
         else
         {
             _spriteRend.DOColor(colorB, colorChangeDuration);
+            _spriteRend.sortingLayerName = layerName;
+            _spriteRend.sortingOrder = setOrderInLayerTo;
         }
         
     }
