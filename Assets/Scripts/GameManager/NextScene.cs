@@ -21,9 +21,9 @@ public class NextScene : MonoBehaviour {
             anim.SetTrigger("isFadingOut");
         }*/
 
-        if (SceneManager.GetActiveScene().buildIndex == 7 && Input.GetButton("Jump")) {
+        /*if (SceneManager.GetActiveScene().buildIndex == 7 && Input.GetButton("Jump")) {
             SceneManager.LoadScene("Menu");
-        }
+        }*/
         /*if (Input.GetKeyDown(KeyCode.Space)) {
             anim.SetTrigger("isFadingOut");
         }*/
