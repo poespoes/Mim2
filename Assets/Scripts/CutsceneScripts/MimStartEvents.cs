@@ -22,6 +22,12 @@ public class MimStartEvents : MonoBehaviour
         {
             delayTime = 2;
         }
+
+        if (FindObjectOfType<PlayerStats>() != null)
+        {
+            PlayerStats.mimLit = false;
+        }
+        
     }
 
     void Start()
@@ -68,6 +74,14 @@ public class MimStartEvents : MonoBehaviour
         foreach (MonoBehaviour script in listOfScripts)
         {
             script.enabled = false;
+        }
+    }
+
+    public void MimLitOff()
+    {
+        if (FindObjectOfType<PlayerStats>() != null)
+        {
+            PlayerStats.mimLit = false;
         }
     }
 
