@@ -22,6 +22,7 @@ public class EnableRealLeaf : MonoBehaviour
 
     private void Awake()
     {
+        /*
         originalMoveSpeed = PlayerStats.moveSpeed;
         
         
@@ -33,7 +34,7 @@ public class EnableRealLeaf : MonoBehaviour
         PlayerMovement = PlayerStats.player.GetComponent<PlayerMovement>();
 
         canMove = false;
-        PlayerMovement.enabled = false;
+        PlayerMovement.enabled = false;*/
 
 
     }

@@ -84,6 +84,8 @@ public class MimStartEvents : MonoBehaviour
             PlayerStats.mimLit = false;
         }
     }
+    
+    
 
     public IEnumerator ExecuteEvent(int n)
     {
@@ -100,4 +102,6 @@ public class MimStartEvents : MonoBehaviour
         }
         
     }
+    
+    
 }
