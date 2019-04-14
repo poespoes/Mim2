@@ -93,7 +93,7 @@ public class MimStartEvents : MonoBehaviour
         
         events[n].Invoke();
 
-        if (n < events.Count)
+        if (n < events.Count-1)
         {
             numberOfEvent++;
             StartCoroutine(ExecuteEvent(numberOfEvent));

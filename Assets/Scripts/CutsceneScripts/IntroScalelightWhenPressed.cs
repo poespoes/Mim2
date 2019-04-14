@@ -54,6 +54,10 @@ public class IntroScalelightWhenPressed : MonoBehaviour
 
     void LightDeath()
     {
-        vineAnim.SetTrigger("playAnimation");
+        if (vineAnim != null)
+        {
+            vineAnim.SetTrigger("playAnimation");
+        }
+
     }
 }
