@@ -13,6 +13,8 @@ public class EnableRealLeaf : MonoBehaviour
 
     public float timer;
     public float timeTilCanPlay;
+
+    public PlayerMovement PlayerMovement;
     
     // Start is called before the first frame update
 
@@ -25,8 +27,12 @@ public class EnableRealLeaf : MonoBehaviour
         mimLeafGameObject.SetActive(false);
         //mimLightGameObject.SetActive(false);
         scaleLeaf.enabled = false;
-        
-        
+
+        PlayerMovement = PlayerStats.player.GetComponent<PlayerMovement>();
+
+        PlayerMovement.enabled = false;
+
+
     }
 
     void Start()
@@ -50,6 +56,8 @@ public class EnableRealLeaf : MonoBehaviour
             mimLeafGameObject.SetActive(true);
             //mimLightGameObject.SetActive(true);
             Destroy(scaleLeaf.gameObject);
+
+            PlayerMovement.enabled = true;
         }
     }
 }
