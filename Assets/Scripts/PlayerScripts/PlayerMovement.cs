@@ -387,6 +387,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public void EnableMovement()
 	{
+		Debug.Log("Movement reneabled");
 		PlayerStats.isInteractive = true;
 		moveSpeed = originalMoveSpeed;
 		anim.SetBool("longFall", false);
