@@ -84,7 +84,8 @@ public class Zone1bScaleLight : MonoBehaviour
 
     public void DisableSelf()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        //this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        this.gameObject.SetActive(false);
     }
     
     public void PlayerEnabled()
