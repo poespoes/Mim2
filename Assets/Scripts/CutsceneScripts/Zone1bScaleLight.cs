@@ -18,7 +18,7 @@ public class Zone1bScaleLight : MonoBehaviour
 
     public UnityEvent lightUpEvent;
 
-    
+    public GameObject TutorialLight;
     
     
 
@@ -85,6 +85,7 @@ public class Zone1bScaleLight : MonoBehaviour
     public void DisableSelf()
     {
         //this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        TutorialLight.SetActive(false);
         this.gameObject.SetActive(false);
     }
     
