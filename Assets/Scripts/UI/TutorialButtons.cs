@@ -8,6 +8,7 @@ public class TutorialButtons : MonoBehaviour
     public bool playableByTimer;
     public float timer;
     public float timeTilPlayable;
+    private bool canShow;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +28,9 @@ public class TutorialButtons : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Player" && !canShow) {
             button.SetActive(true);
+            canShow = true;
         }
     }
 
