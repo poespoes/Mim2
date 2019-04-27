@@ -15,6 +15,8 @@ public class FreezePlayer : MonoBehaviour
 
     public bool hasTriggered;
 
+    public int FadeOutTime;
+
     private void Awake()
     {
         instance = this;
@@ -62,8 +64,16 @@ public class FreezePlayer : MonoBehaviour
         if (PlayerStats.grounded == true)
         {
             PlayerStats.player.GetComponent<Animator>().SetTrigger("longSleep");
+            StartCoroutine(StartFadingOut());
+
         }
         
+    }
+
+    public IEnumerator StartFadingOut()
+    {
+        yield return new WaitForSeconds(FadeOutTime);
+        NextScene.thisNextScene.IsFadingOut();
     }
 
     public IEnumerator SlowFreeze()

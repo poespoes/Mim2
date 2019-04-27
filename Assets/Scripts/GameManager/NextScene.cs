@@ -8,8 +8,12 @@ public class NextScene : MonoBehaviour {
     private int nextSceneToLoad;
 
 
+    public static NextScene thisNextScene;
+    
+    
     void Start() {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        thisNextScene = this;
     }
 
 
@@ -32,6 +36,11 @@ public class NextScene : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         anim.SetTrigger("isFadingOut");
         FreezePlayer.Freeze();
+    }
+
+    public void IsFadingOut()
+    {
+        anim.SetTrigger("isFadingOut");
     }
 
     private void LoadScene() {
