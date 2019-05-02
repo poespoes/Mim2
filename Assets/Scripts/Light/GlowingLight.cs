@@ -14,7 +14,9 @@ public class GlowingLight : MonoBehaviour
     
     [Range(0.1f,10.0f)]
     public float lightUpDelay;
-    
+
+    public SpriteRenderer attackedByVine;
+    public SpriteRenderer glow;
     
     // Start is called before the first frame update
     void Start()
@@ -70,6 +72,7 @@ public class GlowingLight : MonoBehaviour
         {
             Debug.Log("Playere entered");
             canBeLit = true;
+            
         }
 
         else if (other.CompareTag("Vine"))
@@ -77,7 +80,8 @@ public class GlowingLight : MonoBehaviour
             Debug.Log("Vine entered");
             
             this.transform.parent.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            
+
+            attackedByVine.enabled = true;
         }
     }
 
@@ -88,7 +92,6 @@ public class GlowingLight : MonoBehaviour
         this.GetComponent<Animator>().SetBool("LightOFF",false);
         this.GetComponent<BoxCollider2D>().isTrigger = true;
         this.gameObject.tag = "LightObject";    //Poe added this to let the vine chase light object
-        
     }
 
     public void LightOff()
@@ -97,6 +100,7 @@ public class GlowingLight : MonoBehaviour
         objectLit = true;
         this.GetComponent<Animator>().SetBool("LightOFF",true);
         this.GetComponent<Animator>().SetBool("LightON",false);
+        attackedByVine.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)

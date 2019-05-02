@@ -89,7 +89,7 @@ public class PlayerStats : MonoBehaviour
 
 		//kills player if they're too afraid - might consider removing
         if(lightlessTimer <= 0) {
-            Die();
+            //Die();
         }
 
 		//tempTest
