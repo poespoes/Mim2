@@ -22,6 +22,15 @@ public class IsMimHere : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             Anim.SetTrigger("isMoving");
+            other.transform.SetParent(this.transform);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player") {
+           
+            other.transform.SetParent(null);
         }
     }
 }
