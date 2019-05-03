@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour
 	public int Fear;
 	public static bool mimLit; //if mim is lit or not
 	public bool _mimLit;
+	public static bool vineCanChase;
+	public bool _vineCanChase;
 	public static bool canToggle; //whether or not the light is ready to toggle or not - true when animation ends
 	public bool CanToggle;
 	public static bool canDie; //if can die is true and the light is activated, the vine kills Mim
@@ -62,6 +64,7 @@ public class PlayerStats : MonoBehaviour
 	{
 		playerAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
 		moveSpeed = PlayerMovement.originalMoveSpeed;
+		leafDead = false;
 	}
 	
 	// Update is called once per frame
@@ -102,6 +105,7 @@ public class PlayerStats : MonoBehaviour
 		}
 
 		grounded = player.GetComponent<PlayerMovement>().grounded;
+		_vineCanChase = vineCanChase;
 	}
 
 

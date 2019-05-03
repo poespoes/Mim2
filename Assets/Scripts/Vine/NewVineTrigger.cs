@@ -35,7 +35,7 @@ public class NewVineTrigger : MonoBehaviour
 
         if (target != null && target.gameObject.GetComponent<PlayerStats>() != null)
         {
-            if (PlayerStats.mimLit == true && target!=null)
+            if (PlayerStats.mimLit == true && target!=null && PlayerStats.vineCanChase==true)
             {
                 foundLight = true;
             }

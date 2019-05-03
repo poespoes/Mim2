@@ -35,5 +35,19 @@ public class MimLeaf : MonoBehaviour
         if(PlayerStats.leafDead == true) {
             anim.SetBool("LeafRED", true);
         }
+
+      
+    }
+
+    public void MimLightTurnsOn()
+    {
+        PlayerStats.vineCanChase = true;
+        Debug.Log("LightBringer");
+    }
+
+    public void MimLIghtTurnsOff()
+    {
+        PlayerStats.vineCanChase = false;
+        Debug.Log("Arthas");
     }
 }
