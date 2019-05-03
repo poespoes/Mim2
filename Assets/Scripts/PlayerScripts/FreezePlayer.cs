@@ -63,7 +63,7 @@ public class FreezePlayer : MonoBehaviour
     {
         if (PlayerStats.grounded == true)
         {
-            PlayerStats.player.GetComponent<Animator>().SetTrigger("longSleep");
+            PlayerStats.player.GetComponent<Animator>().SetTrigger("isSleepingEndzone");
             StartCoroutine(StartFadingOut());
 
         }
