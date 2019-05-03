@@ -39,7 +39,9 @@ public class PlayerStats : MonoBehaviour
 
 	public static bool startsSleeping;
 	public bool _startsSleeping;
-	
+
+    public static bool leafDead;
+
     private void Awake()
 	{
 		isInteractive = true;
@@ -142,6 +144,7 @@ public class PlayerStats : MonoBehaviour
 
 	public void Die()
 	{
+        leafDead = true;
 		PlayerStats.isInteractive = false;
 		PlayerStats.canDie = false;
 		PlayerMovement.isClimbing = false;

@@ -31,5 +31,9 @@ public class MimLeaf : MonoBehaviour
             anim.SetBool("LeafOFF",false);
                 
         }
+
+        if(PlayerStats.leafDead == true) {
+            anim.SetBool("LeafRED", true);
+        }
     }
 }
