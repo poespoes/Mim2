@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 	public float longFallThreshold; //the time after which long fall is initiated
 	public float timeFalling; //how long Mim has been airborne
 
+    public GameObject LeafPointer; //To tell mimleaf that it needs to flip
+
 	private void Awake()
 	{
 		originalMoveSpeed = moveSpeed;
@@ -153,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
 					foreach (SpriteRenderer _sprite in spritesToFlip)
 					{
 						_sprite.flipX = false;
+                        LeafPointer.transform.localScale = new Vector3(1, 1, 1);
 					}
 
 
@@ -163,7 +166,8 @@ public class PlayerMovement : MonoBehaviour
 					foreach (SpriteRenderer _sprite in spritesToFlip)
 					{
 						_sprite.flipX = true;
-					}
+                        LeafPointer.transform.localScale = new Vector3(-1, 1, 1);
+                    }
 				}
 
 				Debug.Log("Moving");
@@ -251,7 +255,8 @@ public class PlayerMovement : MonoBehaviour
 				foreach (SpriteRenderer _sprite in spritesToFlip)
 				{
 					_sprite.flipX = false;
-				}
+                    LeafPointer.transform.localScale = new Vector3(1, 1, 1);
+                }
 
 
 			}
@@ -261,7 +266,8 @@ public class PlayerMovement : MonoBehaviour
 				foreach (SpriteRenderer _sprite in spritesToFlip)
 				{
 					_sprite.flipX = true;
-				}
+                    LeafPointer.transform.localScale = new Vector3(-1, 1, 1);
+                }
 			}
 		}
 	}
