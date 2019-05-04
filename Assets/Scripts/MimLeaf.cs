@@ -5,6 +5,7 @@ using UnityEngine;
 public class MimLeaf : MonoBehaviour
 {
     public Animator anim;
+    public GameObject mimLeafPointer;
     
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,8 @@ public class MimLeaf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.transform.position = mimLeafPointer.transform.position;
+        this.transform.rotation = mimLeafPointer.transform.rotation;
     }
 
     private void LateUpdate()
