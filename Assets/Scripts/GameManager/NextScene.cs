@@ -7,6 +7,7 @@ public class NextScene : MonoBehaviour {
     public Animator anim;
     private int nextSceneToLoad;
 
+    private string thisScene;
 
     public static NextScene thisNextScene;
     
@@ -14,6 +15,8 @@ public class NextScene : MonoBehaviour {
     void Start() {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         thisNextScene = this;
+
+        thisScene = SceneManager.GetActiveScene().name;
     }
 
 
@@ -24,7 +27,9 @@ public class NextScene : MonoBehaviour {
         /*if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyDown(KeyCode.Space)) {
             anim.SetTrigger("isFadingOut");
         }*/
-
+        if(thisScene == ("TempEndScene")) {
+            SceneManager.LoadScene("Menu");
+        }
         /*if (SceneManager.GetActiveScene().buildIndex == 7 && Input.GetButton("Jump")) {
             SceneManager.LoadScene("Menu");
         }*/
