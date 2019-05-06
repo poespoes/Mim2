@@ -18,6 +18,7 @@ public class MimLeaf : MonoBehaviour
     {
         this.transform.position = mimLeafPointer.transform.position;
         this.transform.rotation = mimLeafPointer.transform.rotation;
+        
     }
 
     private void LateUpdate()

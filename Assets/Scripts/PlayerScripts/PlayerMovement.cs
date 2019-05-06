@@ -167,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
 					{
 						_sprite.flipX = true;
                         LeafPointer.transform.localScale = new Vector3(-1, 1, 1);
+                        //LeafPointer.transform.rotation = Quaternion.Euler(LeafPointer.transform.rotation.x, LeafPointer.transform.rotation.y, -LeafPointer.transform.rotation.z);
                     }
 				}
 
@@ -256,6 +257,7 @@ public class PlayerMovement : MonoBehaviour
 				{
 					_sprite.flipX = false;
                     LeafPointer.transform.localScale = new Vector3(1, 1, 1);
+                    
                 }
 
 
@@ -267,6 +269,7 @@ public class PlayerMovement : MonoBehaviour
 				{
 					_sprite.flipX = true;
                     LeafPointer.transform.localScale = new Vector3(-1, 1, 1);
+                    LeafPointer.transform.rotation = Quaternion.Euler(LeafPointer.transform.rotation.x, LeafPointer.transform.rotation.y, -LeafPointer.transform.rotation.z);
                 }
 			}
 		}
