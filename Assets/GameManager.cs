@@ -13,7 +13,11 @@ public class GameManager : MonoBehaviour
     public static int HighestCameraPriority;
     public static CinemachineVirtualCamera currentCam;
     public static CinemachineVirtualCamera prevCam;
-   
+
+    public bool restartAtForcedZone;
+    public bool canRestartAtForcedZone;
+
+    public string forceLoadScene;
 
     private void Awake()
     {
@@ -41,11 +45,28 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartScene() {
-        StartCoroutine(RestartSequence());
+        if (restartAtForcedZone == false) {
+            StartCoroutine(RestartSequence());
+        }
+        if (restartAtForcedZone == true) {
+            StartCoroutine(RestartAtForcedZoneSequence());
+        }
     }
 
     IEnumerator RestartSequence() {
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    IEnumerator RestartAtForcedZoneSequence() {
+        
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(forceLoadScene);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            Debug.Log("CAN RESTART AT FORCED SCENE!");
+            restartAtForcedZone = true;
+        }
     }
 }

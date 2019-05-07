@@ -8,6 +8,8 @@ public class NextScene : MonoBehaviour {
     private int nextSceneToLoad;
 
     private string thisScene;
+    public bool forcingLoadScene;
+    public string forceLoadScene;
 
     public static NextScene thisNextScene;
     
@@ -27,7 +29,8 @@ public class NextScene : MonoBehaviour {
         /*if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyDown(KeyCode.Space)) {
             anim.SetTrigger("isFadingOut");
         }*/
-        if(thisScene == ("TempEndScene")) {
+        
+        if (thisScene == ("TempEndScene") && Input.GetButton("Jump")) {
             SceneManager.LoadScene("Menu");
         }
         /*if (SceneManager.GetActiveScene().buildIndex == 7 && Input.GetButton("Jump")) {
@@ -49,6 +52,11 @@ public class NextScene : MonoBehaviour {
     }
 
     private void LoadScene() {
-        SceneManager.LoadScene(nextSceneToLoad);
+        if (forcingLoadScene == true) {
+            SceneManager.LoadScene(forceLoadScene);
+        } else {
+            SceneManager.LoadScene(nextSceneToLoad);
+        }
+        
     }
 }
