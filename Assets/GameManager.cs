@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool canRestartAtForcedZone;
 
     public string forceLoadScene;
+    public bool canLoad;
 
     private void Awake()
     {
@@ -27,8 +28,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        if (canRestartAtForcedZone) {
+            Debug.Log("LOADING CHECKPOINT IN BACKGROUND");
+            StartCoroutine(LoadYourAsyncScene());
+        }
+
         if (startFromHere) {
             PlayerPrefs.SetInt("SpawnPointIndex", Here);
         }
@@ -49,18 +53,43 @@ public class GameManager : MonoBehaviour
             StartCoroutine(RestartSequence());
         }
         if (restartAtForcedZone == true) {
+            canLoad = true;
             StartCoroutine(RestartAtForcedZoneSequence());
         }
     }
 
     IEnumerator RestartSequence() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Resources.UnloadUnusedAssets();
     }
     IEnumerator RestartAtForcedZoneSequence() {
         
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(forceLoadScene);
+        yield return new WaitForSeconds(3);
+        canLoad = true;
+        //SceneManager.LoadScene(forceLoadScene);
+        //StartCoroutine(LoadYourAsyncScene());
+    }
+
+    IEnumerator LoadYourAsyncScene() {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(forceLoadScene);
+        asyncLoad.allowSceneActivation = false;
+        //Debug.Log("Pro :" + asyncLoad.progress);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone) {
+            yield return null;
+
+            if (asyncLoad.progress >= 0.9f && canLoad) {
+                asyncLoad.allowSceneActivation = true;
+            }
+            //SceneManager.UnloadSceneAsync("forceLoadScene");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
