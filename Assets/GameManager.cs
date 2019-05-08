@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public static CinemachineVirtualCamera prevCam;
 
     public bool restartAtForcedZone;
+    public bool canRestartCheck;
     public bool canRestartAtForcedZone;
 
     public string forceLoadScene;
@@ -28,10 +29,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (canRestartAtForcedZone) {
-            Debug.Log("LOADING CHECKPOINT IN BACKGROUND");
-            StartCoroutine(LoadYourAsyncScene());
-        }
+        /*if (canRestartCheck) {
+            canRestartAtForcedZone = true;
+        }*/
+
+        
 
         if (startFromHere) {
             PlayerPrefs.SetInt("SpawnPointIndex", Here);
@@ -46,6 +48,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("SpawnPointIndex = "+ PlayerPrefs.GetInt("SpawnPointIndex"));
 
+        if (canRestartAtForcedZone && canRestartCheck == false) {
+            canRestartCheck = true;
+            Debug.Log("LOADING CHECKPOINT IN BACKGROUND");
+            StartCoroutine(LoadYourAsyncScene());
+        }
     }
 
     public void RestartScene() {
@@ -96,6 +103,7 @@ public class GameManager : MonoBehaviour
         if (collision.tag == "Player") {
             Debug.Log("CAN RESTART AT FORCED SCENE!");
             restartAtForcedZone = true;
+            canRestartAtForcedZone = true;
         }
     }
 }
