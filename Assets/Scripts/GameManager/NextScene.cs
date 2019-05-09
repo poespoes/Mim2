@@ -23,7 +23,10 @@ public class NextScene : MonoBehaviour {
 
 
     void Update() {
-        if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetButton("Fire1")) {
+        /*if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetButton("Fire1")) {
+            anim.SetTrigger("isFadingOut");
+        }*/
+        if (SceneManager.GetActiveScene().buildIndex == 0 && Input.anyKey) {
             anim.SetTrigger("isFadingOut");
         }
         /*if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyDown(KeyCode.Space)) {
