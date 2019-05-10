@@ -56,7 +56,7 @@
             <destination>{97cbc5d5-3772-4140-9b72-55689a42a87b}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{b27336c9-c6c9-4d18-811c-4c9e85fa13dc}</destination>
+            <destination>{eea52499-3dd9-47d6-97de-a4c1281511d7}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{51771fef-cd5e-47b8-8c4b-ebe73e77eed4}"/>
@@ -153,6 +153,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{7cdda97f-af78-430b-adb9-bc6ff544f280}">
+        <relationship name="modulators">
+            <destination>{1a1f477b-f67f-486c-857d-4d8fa5183552}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{e6321b37-6d28-46c1-84ef-358eb76bcfe9}</destination>
         </relationship>
@@ -612,6 +615,38 @@
         <relationship name="markerTrack">
             <destination>{091d44d6-77c7-41ad-8203-ae1a11be6c04}</destination>
         </relationship>
+    </object>
+    <object class="ADSRModulator" id="{1a1f477b-f67f-486c-857d-4d8fa5183552}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="initialValue">
+            <value>-80</value>
+        </property>
+        <property name="attackTime">
+            <value>280</value>
+        </property>
+        <property name="peakValue">
+            <value>0.5</value>
+        </property>
+        <property name="holdTime">
+            <value>980</value>
+        </property>
+        <property name="decayTime">
+            <value>600</value>
+        </property>
+        <property name="decayShape">
+            <value>0.151913822</value>
+        </property>
+        <property name="sustainValue">
+            <value>-8.5</value>
+        </property>
+        <property name="releaseTime">
+            <value>980</value>
+        </property>
+        <property name="releaseShape">
+            <value>0.340500206</value>
+        </property>
     </object>
     <object class="MixerBusEffectChain" id="{e6321b37-6d28-46c1-84ef-358eb76bcfe9}">
         <relationship name="effects">

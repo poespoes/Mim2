@@ -8,7 +8,7 @@ public class DestroyFmod : MonoBehaviour
     private bool isDestroyed;
     public NextScene nextScene;
 
-    
+    FMOD.Studio.Bus MasterBus;
     FMOD.Studio.EventInstance Sound;
     
 
@@ -16,7 +16,7 @@ public class DestroyFmod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
     // Update is called once per frame

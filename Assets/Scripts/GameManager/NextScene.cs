@@ -13,12 +13,17 @@ public class NextScene : MonoBehaviour {
 
     public static NextScene thisNextScene;
     public bool gameIsOverA = false;
-    
+
+    FMOD.Studio.Bus MasterBus;
+    FMOD.Studio.EventInstance Sound;
+
     void Start() {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         thisNextScene = this;
 
         thisScene = SceneManager.GetActiveScene().name;
+
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
 
@@ -59,7 +64,7 @@ public class NextScene : MonoBehaviour {
 
     public void TurnOffMusic()
     {
-        gameIsOverA = true;
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void LoadScene() {
