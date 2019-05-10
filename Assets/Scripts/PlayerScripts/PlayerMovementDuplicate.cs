@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementDuplicate : MonoBehaviour
 {
 
 	public float horizontal;

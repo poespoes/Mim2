@@ -56,8 +56,10 @@ public class NextScene : MonoBehaviour {
 
     private void LoadScene() {
         if (forcingLoadScene == true) {
+            anim.SetTrigger("isFadingOut");
             SceneManager.LoadScene(forceLoadScene);
         } else {
+            anim.SetTrigger("isFadingOut");
             SceneManager.LoadScene(nextSceneToLoad);
         }
         

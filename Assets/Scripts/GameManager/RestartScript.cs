@@ -7,7 +7,7 @@ public class RestartScript : MonoBehaviour
 {
     public KeyCode BackToMenu;
     public KeyCode RestartToCheckPoint;
-    public KeyCode NextScene;
+    public KeyCode NextScene = KeyCode.I;
 
     private int nextSceneToLoad;
 

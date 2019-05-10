@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public string forceLoadScene;
     public bool canLoad;
 
+    public Animator anim;
+
     private void Awake()
     {
         HighestCameraPriority = 11;
@@ -66,12 +68,13 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator RestartSequence() {
+        anim.SetTrigger("isFadingOut2");
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resources.UnloadUnusedAssets();
     }
     IEnumerator RestartAtForcedZoneSequence() {
-        
+        anim.SetTrigger("isFadingOut2");
         yield return new WaitForSeconds(3);
         canLoad = true;
         //SceneManager.LoadScene(forceLoadScene);
