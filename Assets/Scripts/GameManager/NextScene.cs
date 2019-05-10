@@ -12,7 +12,7 @@ public class NextScene : MonoBehaviour {
     public string forceLoadScene;
 
     public static NextScene thisNextScene;
-    
+    public bool gameIsOverA = false;
     
     void Start() {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
@@ -27,7 +27,8 @@ public class NextScene : MonoBehaviour {
             anim.SetTrigger("isFadingOut");
         }*/
         if (SceneManager.GetActiveScene().buildIndex == 0 && Input.anyKey) {
-            anim.SetTrigger("isFadingOut");
+            anim.SetTrigger("isFadingOut2");
+            gameIsOverA = true;
         }
         /*if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyDown(KeyCode.Space)) {
             anim.SetTrigger("isFadingOut");
@@ -35,6 +36,7 @@ public class NextScene : MonoBehaviour {
         
         if (thisScene == ("TempEndScene") && Input.GetButton("Jump")) {
             SceneManager.LoadScene("Menu");
+            gameIsOverA = true;
         }
         /*if (SceneManager.GetActiveScene().buildIndex == 7 && Input.GetButton("Jump")) {
             SceneManager.LoadScene("Menu");
@@ -45,21 +47,29 @@ public class NextScene : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        anim.SetTrigger("isFadingOut");
+        
+        anim.SetTrigger("isFadingOut2");
         FreezePlayer.Freeze();
     }
 
     public void IsFadingOut()
     {
-        anim.SetTrigger("isFadingOut");
+        anim.SetTrigger("isFadingOut2");
+    }
+
+    public void TurnOffMusic()
+    {
+        gameIsOverA = true;
     }
 
     private void LoadScene() {
         if (forcingLoadScene == true) {
-            anim.SetTrigger("isFadingOut");
+            //gameIsOverA = true;
+            anim.SetTrigger("isFadingOut2");
             SceneManager.LoadScene(forceLoadScene);
         } else {
-            anim.SetTrigger("isFadingOut");
+            //gameIsOverA = true;
+            anim.SetTrigger("isFadingOut2");
             SceneManager.LoadScene(nextSceneToLoad);
         }
         

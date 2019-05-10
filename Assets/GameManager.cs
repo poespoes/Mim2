@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public bool canLoad;
 
     public Animator anim;
+    //public bool gameIsOverB = false;
 
     private void Awake()
     {
@@ -68,13 +69,14 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator RestartSequence() {
-        anim.SetTrigger("isFadingOut2");
+        anim.SetTrigger("isFadingOut");
         yield return new WaitForSeconds(3);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resources.UnloadUnusedAssets();
     }
     IEnumerator RestartAtForcedZoneSequence() {
-        anim.SetTrigger("isFadingOut2");
+        anim.SetTrigger("isFadingOut");
         yield return new WaitForSeconds(3);
         canLoad = true;
         //SceneManager.LoadScene(forceLoadScene);
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
             yield return null;
 
             if (asyncLoad.progress >= 0.9f && canLoad) {
+                
                 asyncLoad.allowSceneActivation = true;
             }
             //SceneManager.UnloadSceneAsync("forceLoadScene");
