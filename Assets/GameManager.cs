@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene() {
         if (restartAtForcedZone == false) {
+            anim.SetTrigger("isFadingOut2");
             StartCoroutine(RestartSequence());
         }
         if (restartAtForcedZone == true) {
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator RestartSequence() {
-        anim.SetTrigger("isFadingOut");
+        anim.SetTrigger("isFadingOut2");
         yield return new WaitForSeconds(3);
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
